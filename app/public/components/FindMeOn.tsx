@@ -1,33 +1,15 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+
+import { useState } from "react";
+import Socials from "./Socials";
 
 export default function FindMeOn() {
+  const [expandSocials, setExpandSocials] = useState(false);
+
   return (
-    <div className="flex justify-around text-white pt-12">
-      <Link
-        href="/"
-        className="font-normal text-neutral-400 hover:underline hover:text-white"
-      >
-        Github
-      </Link>
-      <Link
-        href="/"
-        className="font-normal text-neutral-400 hover:underline hover:text-white"
-      >
-        Linkedin
-      </Link>
-      <Link
-        href="/"
-        className="font-normal text-neutral-400 hover:underline hover:text-white"
-      >
-        Blog
-      </Link>
-      <Link
-        href="/"
-        className="font-normal text-neutral-400 hover:underline hover:text-white"
-      >
-        Portfolio
-      </Link>
+    <div className="pt-12">
+      <h2 className="text-white">FIND ME ON</h2>
+      <Socials/>
     </div>
   );
 }
