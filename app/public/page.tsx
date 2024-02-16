@@ -4,6 +4,7 @@ import FindMeOn from "./components/findMeOn/FindMeOn";
 import ByteSizeVictories from "./components/victories/ByteSizeVictories";
 import Skills from "./components/skills/Skills";
 import WorkHistory from "./components/workHistory/WorkHistory";
+import Projects from "./components/projects/Projects";
 
 export default function PublicPage() {
   return (
@@ -12,6 +13,7 @@ export default function PublicPage() {
       <ByteSizeVictories />
       <Skills />
       <WorkHistory />
+      <Projects />
       <FindMeOn />
     </div>
   );
