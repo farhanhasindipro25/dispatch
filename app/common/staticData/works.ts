@@ -4,9 +4,9 @@ export const works = [
     company: "Read Global Consultants",
     linkedin: "https://www.linkedin.com/company/read-global-consultant/",
     website: "https://www.readjobs.com/",
-    start_date: "February 2023",
-    end_date: "January 2024",
-    company_type: "Information Technology",
+    start_date: "February 2024",
+    end_date: "Present",
+    company_type: "Staffing and Recruiting",
   },
   {
     position: "Junior Frontend Developer",
