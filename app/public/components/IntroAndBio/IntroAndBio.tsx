@@ -18,7 +18,7 @@ export default function IntroAndBio() {
               Hello there! I am
             </h6>
             <h3 className="text-neutral-300 text-xl font-bold">
-              Farhan Hasin Dipro
+              _farhanHasinDipro
             </h3>
           </div>
           <h3 className="text-neutral-400 text-left text-base font-normal">
