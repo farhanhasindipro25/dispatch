@@ -6,7 +6,7 @@ export default function PublicPageLayout({ children }: PageLayoutProps) {
   return (
     <div className="bg-neutral-950 min-h-screen">
       <PublicNavbar />
-      <div className="max-w-3xl mx-auto py-14">{children}</div>
+      <div className="max-w-2xl mx-auto py-14">{children}</div>
     </div>
   );
 }
