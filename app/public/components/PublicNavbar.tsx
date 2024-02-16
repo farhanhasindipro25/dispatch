@@ -4,7 +4,7 @@ import React from "react";
 
 export default function PublicNavbar() {
   return (
-    <div className="max-w-3xl mx-auto py-10 flex items-center justify-between">
+    <div className="max-w-2xl mx-auto py-10 flex items-center justify-between">
       <div className="flex items-center gap-4">
         <Image
           src="/logo/alt logo.svg"
