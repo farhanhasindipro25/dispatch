@@ -1,5 +1,4 @@
 import { WorkCardProps } from "@/app/interfaces/pages/publicPage/WorkCardProps";
-import Link from "next/link";
 import React from "react";
 
 export default function WorkCard({ work }: WorkCardProps) {
@@ -14,7 +13,7 @@ export default function WorkCard({ work }: WorkCardProps) {
   } = work;
 
   return (
-    <div className="w-full flex items-end justify-between gap-2 p-4 rounded-md bg-neutral-900">
+    <div className="w-full flex items-end justify-between gap-2 p-4 rounded-md bg-neutral-900 hover:bg-neutral-800 border border-neutral-800">
       <div>
         <a
           href={linkedin}

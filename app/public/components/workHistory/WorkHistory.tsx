@@ -6,7 +6,7 @@ export default function WorkHistory() {
   return (
     <div className="pt-12 space-y-6">
       <h2 className="text-base text-white font-semibold">_workHistory</h2>
-      <div className="space-y-6">
+      <div className="grid grid-cols-2 gap-4">
         {works.map((work) => (
           <WorkCard key={work.company} work={work} />
         ))}
