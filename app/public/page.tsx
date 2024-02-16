@@ -1,8 +1,9 @@
 import React from "react";
-import IntroAndBio from "./components/IntroAndBio";
-import FindMeOn from "./components/FindMeOn";
-import ByteSizeVictories from "./components/ByteSizeVictories";
-import Skills from "./components/Skills";
+import IntroAndBio from "./components/IntroAndBio/IntroAndBio";
+import FindMeOn from "./components/findMeOn/FindMeOn";
+import ByteSizeVictories from "./components/victories/ByteSizeVictories";
+import Skills from "./components/skills/Skills";
+import WorkHistory from "./components/workHistory/WorkHistory";
 
 export default function PublicPage() {
   return (
@@ -10,6 +11,7 @@ export default function PublicPage() {
       <IntroAndBio />
       <ByteSizeVictories />
       <Skills />
+      <WorkHistory />
       <FindMeOn />
     </div>
   );

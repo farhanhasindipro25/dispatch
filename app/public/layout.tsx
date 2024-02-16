@@ -1,5 +1,5 @@
 import React from "react";
-import PublicNavbar from "./components/PublicNavbar";
+import PublicNavbar from "./components/ui/PublicNavbar";
 import { PageLayoutProps } from "../interfaces/layouts/PageLayoutProps";
 
 export default function PublicPageLayout({ children }: PageLayoutProps) {
