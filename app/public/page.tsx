@@ -3,6 +3,7 @@ import IntroAndBio from "./components/IntroAndBio";
 import FindMeOn from "./components/FindMeOn";
 import ByteSizeVictories from "./components/ByteSizeVictories";
 import Skills from "./components/Skills";
+import WorkHistory from "./components/WorkHistory";
 
 export default function PublicPage() {
   return (
@@ -10,6 +11,7 @@ export default function PublicPage() {
       <IntroAndBio />
       <ByteSizeVictories />
       <Skills />
+      <WorkHistory />
       <FindMeOn />
     </div>
   );
