@@ -1,5 +1,6 @@
 "use client";
 import Badge from "@/app/components/ui/Badge";
+import Button from "@/app/components/ui/Button";
 import { WorkCardProps } from "@/app/interfaces/pages/workHistoryPage/WorkCardProps";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import React, { useState } from "react";
@@ -33,16 +34,22 @@ export default function WorkCard({ work }: WorkCardProps) {
       </div>
       <div className="pt-4">
         {showSkills === true ? (
-          <div className="flex items-center flex-wrap gap-2">
-            {skills.map((skill) => (
-              <Badge variant="INFO_ALT" key={skill}>
-                {skill}
-              </Badge>
-            ))}
-            <XMarkIcon
-              className="text-neutral-900 cursor-pointer bg-neutral-400 rounded-md w-7 h-7 p-1"
+          <div className="space-y-4 flex flex-col items-end">
+            <div className="flex items-center flex-wrap gap-2">
+              {skills.map((skill) => (
+                <Badge variant="INFO_ALT" key={skill}>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            <Button
+              variant="SECONDARY"
+              className="gap-2"
               onClick={() => setShowSkills(false)}
-            />
+            >
+              <XMarkIcon className="w-5 h-5" />
+              Hide Skills
+            </Button>
           </div>
         ) : showRoles === true ? (
           <div className="flex items-center flex-wrap gap-2">
@@ -55,29 +62,24 @@ export default function WorkCard({ work }: WorkCardProps) {
               </h2>
             ))}
             <div className="w-full flex justify-end">
-              <div
-                className="bg-neutral-950 text-neutral-400 px-4 flex items-center gap-1 py-2 rounded-md text-sm font-bold cursor-pointer w-fit"
+              <Button
+                variant="PRIMARY"
+                className="gap-2"
                 onClick={() => setShowRoles(false)}
               >
                 <XMarkIcon className="w-4 h-4 text-neutral-400" />
                 Hide Roles
-              </div>
+              </Button>
             </div>
           </div>
         ) : (
           <div className="flex justify-end items-center gap-2">
-            <div
-              className="bg-neutral-950 text-neutral-400 px-4 py-2 rounded-md text-sm font-bold cursor-pointer w-fit"
-              onClick={() => setShowSkills(true)}
-            >
+            <Button variant="PRIMARY" onClick={() => setShowSkills(true)}>
               Show Skills
-            </div>
-            <div
-              className="bg-neutral-950 text-neutral-400 px-4 py-2 rounded-md text-sm font-bold cursor-pointer w-fit"
-              onClick={() => setShowRoles(true)}
-            >
+            </Button>
+            <Button variant="PRIMARY" onClick={() => setShowRoles(true)}>
               Show Roles
-            </div>
+            </Button>
           </div>
         )}
       </div>
