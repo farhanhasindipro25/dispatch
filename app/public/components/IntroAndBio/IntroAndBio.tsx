@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 import React from "react";
@@ -29,69 +28,71 @@ export default function IntroAndBio() {
           </h3>
         </div>
       </div>
-      <div className="flex justify-between flex-wrap">
-        <div className="bg-neutral-900 w-fit flex items-start gap-2 px-3 py-2 rounded-md hover:bg-neutral-800 border border-neutral-800">
-          <div>🟢</div>
+      <div className="flex gap-4 flex-wrap">
+        <div className="bg-neutral-900 w-fit flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800 border border-neutral-800">
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
           <div>
             <p className="text-neutral-400 text-xs font-normal">experience</p>
             <h1 className="text-neutral-300 text-sm font-medium">02 years</h1>
           </div>
         </div>
-        <div className="bg-neutral-900 w-fit flex items-start gap-2 px-3 py-2 rounded-md hover:bg-neutral-800 border border-neutral-800">
-          <div>🔴</div>
+        <div className="bg-neutral-900 w-fit flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800 border border-neutral-800">
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
           <div>
             <p className="text-neutral-400 text-xs font-normal">openForWork</p>
             <h1 className="text-neutral-300 text-sm font-medium">
-              Falsy McFalseface
+              Truthy McTruthFace
             </h1>
           </div>
         </div>
-        <div className="bg-neutral-900 w-fit flex items-start gap-2 px-3 py-2 rounded-md hover:bg-neutral-800 border border-neutral-800">
-          <div>🟢</div>
+        <div className="bg-neutral-900 w-fit flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800 border border-neutral-800">
+          <div className="w-3 h-3 bg-red-500 rounded-full" />
           <div>
-            <p className="text-neutral-400 text-xs font-normal">working@</p>
+            <p className="text-neutral-400 text-xs font-normal">worked@</p>
             <h1 className="text-neutral-300 text-sm font-medium">
-              Read Global Consultants
+              REPLIQ Limited
             </h1>
           </div>
         </div>
-        <div className="bg-neutral-900 w-fit flex items-start gap-2 px-3 py-2 rounded-md hover:bg-neutral-800">
-          <div>🟢</div>
+        <div className="bg-neutral-900 w-fit flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800">
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
+          <div>
+            <p className="text-neutral-400 text-xs font-normal">email</p>
+            <h1 className="text-white text-sm font-medium">
+              farhan.hasin.25@gmail.com
+            </h1>
+          </div>
+        </div>
+        <div className="bg-neutral-900 w-fit flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800">
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
+          <div>
+            <p className="text-neutral-400 text-xs font-normal">phone</p>
+            <h1 className="text-white text-sm font-medium">+8801731441024</h1>
+          </div>
+        </div>
+        <div className="bg-neutral-900 w-fit flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800">
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
           <div>
             <p className="text-neutral-400 text-xs font-normal">location</p>
             <h1 className="text-white text-sm font-medium">Bangladesh</h1>
           </div>
         </div>
-      </div>
-      <div className="space-y-4">
-        <h2 className="text-sm text-neutral-400">FIND ME ON</h2>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/farhan-hasin-dipro/"
-            >
-              <Image
-                src="/icons/github.png"
-                width={100}
-                height={100}
-                alt="Github logo"
-                className="w-6 h-6 p-1 rounded-full object-cover bg-neutral-400 hover:bg-neutral-300 cursor-pointer hover:scale-110 transition-all ease-in-out duration-500"
-              />
-            </a>
-            <a target="_blank" href="https://github.com/farhanhasindipro25">
-              <Image
-                src="/icons/linkedin.png"
-                width={100}
-                height={100}
-                alt="Linkedin logo"
-                className="w-6 h-6 p-1 rounded-md object-cover bg-neutral-400 hover:bg-neutral-300 cursor-pointer hover:scale-110 transition-all ease-in-out duration-500"
-              />
-            </a>
+        <div className="bg-neutral-900 w-[45%] flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800">
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
+          <div className="truncate">
+            <p className="text-neutral-400 text-xs font-normal">github</p>
+            <h1 className="text-white truncate text-sm font-medium">
+              linkedin.com/in/farhan-hasin-dipro/
+            </h1>
           </div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-neutral-400">+8801731441024,</h2>
-            <h2 className="text-neutral-400">farhan.hasin.25@gmail.com</h2>
+        </div>
+        <div className="bg-neutral-900 w-[47%] flex items-baseline gap-2 px-3 py-2 rounded-md hover:bg-neutral-800">
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
+          <div className="truncate">
+            <p className="text-neutral-400 text-xs font-normal">linkedin</p>
+            <h1 className="text-white truncate text-sm font-medium">
+              github.com/farhanhasindipro25
+            </h1>
           </div>
         </div>
       </div>

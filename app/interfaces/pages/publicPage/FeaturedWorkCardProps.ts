@@ -1,4 +1,4 @@
-export interface WorkCardProps {
+export interface FeaturedWorkCardProps {
   work: {
     position: string;
     company: string;

@@ -1,7 +1,7 @@
 import { featuredWorks } from "@/app/common/staticData/works";
 import React from "react";
-import WorkCard from "./WorkCard";
 import Link from "next/link";
+import FeaturedWorkCard from "./FeaturedWorkCard";
 
 export default function WorkHistory() {
   return (
@@ -17,7 +17,7 @@ export default function WorkHistory() {
       </Link>
       <div className="grid grid-cols-2 gap-4">
         {featuredWorks.map((work) => (
-          <WorkCard key={work.company} work={work} />
+          <FeaturedWorkCard key={work.company} work={work} />
         ))}
       </div>
     </div>

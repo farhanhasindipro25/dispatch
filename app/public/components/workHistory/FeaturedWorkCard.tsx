@@ -1,7 +1,7 @@
-import { WorkCardProps } from "@/app/interfaces/pages/publicPage/WorkCardProps";
+import { FeaturedWorkCardProps } from "@/app/interfaces/pages/publicPage/FeaturedWorkCardProps";
 import React from "react";
 
-export default function WorkCard({ work }: WorkCardProps) {
+export default function FeaturedWorkCard({ work }: FeaturedWorkCardProps) {
   const {
     position,
     company,
