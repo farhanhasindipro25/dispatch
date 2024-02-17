@@ -5,7 +5,7 @@ import React from "react";
 export default function PublicNavbar() {
   return (
     <div className="bg-neutral-950 sticky top-0">
-      <div className="flex py-6 items-center justify-between max-w-2xl mx-auto">
+      <div className="flex px-4 py-6 items-center justify-between max-w-2xl mx-auto">
         <div>
           <Image
             src="/images/user_logo.png"

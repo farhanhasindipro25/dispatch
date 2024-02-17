@@ -13,7 +13,7 @@ export const publicPageTabs = [
   },
   {
     label: "_work",
-    href: "/public/work",
+    href: "/public/work-history",
     key: 3,
     current: false,
   },

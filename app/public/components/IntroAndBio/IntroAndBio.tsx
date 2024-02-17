@@ -1,12 +1,17 @@
+"use client";
+import { publicPageTabs } from "@/app/common/staticData/publicPageTabs";
 import HorizontalTabNavigation from "@/app/components/ui/HorizontalTabNavigation";
+import { HorizontalTabProps } from "@/app/interfaces/components/HorizontalTabProps";
 import Image from "next/image";
 
-import React from "react";
+import React, { useState } from "react";
 
 export default function IntroAndBio() {
+  const tabs: HorizontalTabProps[] = publicPageTabs;
+  const [currentTab, setCurrentTab] = useState(1);
   return (
-    <div className="space-y-12 bg-neutral-950 sticky top-[100px] pt-6">
-      <div className="max-w-2xl mx-auto space-y-8">
+    <div className="space-y-12 bg-neutral-950 md:sticky md:top-[100px] pt-6">
+      <div className="max-w-2xl mx-auto px-4 space-y-8">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           <Image
             src="/images/user.jpg"
@@ -31,7 +36,7 @@ export default function IntroAndBio() {
           </div>
         </div>
         <div>
-          <HorizontalTabNavigation />
+          <HorizontalTabNavigation tabs={tabs} current={currentTab} />
         </div>
       </div>
     </div>
