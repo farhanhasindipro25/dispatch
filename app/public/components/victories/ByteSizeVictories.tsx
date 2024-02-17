@@ -10,7 +10,7 @@ export default function ByteSizeVictories() {
       <div className="pl-6">
         {byteSizeVictories?.map((item) => (
           <h2
-            className="list-item text-neutral-400 font-normal"
+            className="list-item text-neutral-400 text-sm font-medium"
             key={item.item}
           >
             {item.item}
