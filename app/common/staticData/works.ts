@@ -1,4 +1,4 @@
-export const works = [
+export const featuredWorks = [
   {
     position: "UX Engineer",
     company: "Read Global Consultants",
