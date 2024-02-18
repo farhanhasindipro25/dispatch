@@ -24,39 +24,20 @@ export default function HorizontalTabNavigation({ tabs, current }: any) {
     }
   };
   return (
-    <>
-      <div className="hidden md:block">
-        <ul className="flex w-full gap-8 pb-[7.1px] border-b border-neutral-500 mb-6">
-          {tabs.map((tab: TabOptions) => (
-            <li key={tab.label}>
-              <Link
-                href={tab.href}
-                className={cn(
-                  DEFAULT_STYLES,
-                  pathname === tab.href ? ACTIVE_TAB_STYLES : DEFAULT_TAB_STYLES
-                )}
-              >
-                {tab.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="md:hidden mb-6">
-        <select
-          id="tabs"
-          name="tabs"
-          className="block w-full px-3 py-3 text-sm border rounded-md shadow-sm appearance-none text-neutral-500 border-neutral-800 placeholder-neutral-400 focus:border-primary-500 focus:outline-none bg-neutral-800 focus:ring-primary-500 active:border-primary-500 cursor-text"
-          value={current.key}
-          onChange={handleTabChange}
-        >
-          {tabs.map((tab: TabOptions) => (
-            <option key={tab.key} value={tab.key}>
-              {tab.label}
-            </option>
-          ))}
-        </select>
-      </div>
-    </>
+    <ul className="flex w-full gap-8 pb-[7.1px] border-b border-neutral-500 mb-6 overflow-x-auto no-scrollbar bg-neutral-950">
+      {tabs.map((tab: TabOptions) => (
+        <li key={tab.label}>
+          <Link
+            href={tab.href}
+            className={cn(
+              DEFAULT_STYLES,
+              pathname === tab.href ? ACTIVE_TAB_STYLES : DEFAULT_TAB_STYLES
+            )}
+          >
+            {tab.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
