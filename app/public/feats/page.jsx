@@ -3,10 +3,10 @@ import Skills from "./skills/Skills";
 
 function Feats() {
   return (
-    <div className="divide-y divide-neutral-700 space-y-12">
-      <div>
+    <div className="divide-y divide-neutral-700 space-y-6">
+      <div className="space-y-2">
         <h2 className="text-base text-neutral-300 font-semibold">
-          byteSizeVictories
+          _byteSizeVictories
         </h2>
         <div className="pl-6">
           {byteSizeVictories?.map((item) => (
@@ -18,6 +18,11 @@ function Feats() {
             </h2>
           ))}
         </div>
+      </div>
+      <div className="pt-6">
+        <h2 className="text-base text-neutral-300 font-semibold">
+          _currentlyFightingWith
+        </h2>
       </div>
       <Skills />
     </div>

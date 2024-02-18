@@ -1,4 +1,5 @@
 import StatsBadge from "@/app/components/ui/StatsBadge";
+import MonthlyTimeline from "./components/ui/MonthlyTimeline";
 
 export default function PublicPage() {
   return (
@@ -14,7 +15,7 @@ export default function PublicPage() {
         <StatsBadge label="location" value="Bangladesh" activeColor="green" />
       </div>
       <div>
-        <h2 className="text-white">So far in 2024</h2>
+        <MonthlyTimeline />
       </div>
     </div>
   );
