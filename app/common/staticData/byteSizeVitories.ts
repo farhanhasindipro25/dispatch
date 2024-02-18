@@ -1,4 +1,4 @@
-export const byteSizeVictories = [
+const byteSizeVictories = [
   {
     item: "Architecting scalable front-end solutions from the ground up using ReactJS and NextJS.",
   },
@@ -42,3 +42,5 @@ export const byteSizeVictories = [
     item: "Maintaining product documentation using Docusaurus.",
   },
 ];
+
+export default byteSizeVictories;

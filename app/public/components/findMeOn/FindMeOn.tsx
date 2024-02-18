@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FindMeOn() {
   return (
-    <div className="max-w-2xl border-t border-neutral-800 mx-auto px-4 ">
+    <div className="max-w-2xl border-t border-neutral-800 mx-auto px-4 mt-10">
       <div className="p-12">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-4 text-white">

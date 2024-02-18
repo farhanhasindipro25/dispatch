@@ -1,4 +1,4 @@
-import StatsBadge from "../components/ui/StatsBadge";
+import StatsBadge from "@/app/components/ui/StatsBadge";
 
 export default function PublicPage() {
   return (
