@@ -1,4 +1,3 @@
-// import byteSizeVictories from "@/app/common/staticData/byteSizeVitories";
 import { byteSizeVictories } from "@/app/common/staticData/byteSizeVitories";
 import Skills from "./skills/Skills";
 
