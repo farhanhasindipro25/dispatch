@@ -5,6 +5,49 @@ const monthlyTimelineData: MonthlyTimelineDataItem[] = [
     month: "February 2024",
     activityLog: [
       {
+        kind: "EXPLORING",
+        topic: "frontend microservices (micro-frontend)",
+        thoughts:
+          "Started to get my hands on microservices dividing each activities into microservices. This is really helpful in terms of maintainability and debugging.",
+        category: "FRONTEND",
+      },
+      {
+        kind: "EXPLORING",
+        topic: "backend authentication and authorization",
+        thoughts:
+          "Efficienly learned token based authentication and role based authorization along with validating actions with middlewares.",
+        category: "BACKEND",
+      },
+      {
+        kind: "EXPLORING",
+        topic:
+          "efficient pagination, sorting, searching and filtering in the backend",
+        thoughts:
+          "Again, maintaining this reusabilty comes in handy. Reusability in these codebases are just out of world and working on them is really enjoyable",
+        category: "BACKEND",
+      },
+      {
+        kind: "LEARNING",
+        topic: "global error handling in the backend",
+        thoughts:
+          "Global error handling is super fun. I used a common error handler function which receives several custom error handlers like validation errors, server errors, cast errors, api errors, etc. and provides a generic error response that is meaningful to the frontend.",
+        category: "BACKEND",
+      },
+      {
+        kind: "LEARNING",
+        topic: "backend codebase best practices",
+        thoughts:
+          "Maintaining a reusable codebase with the absolute best practices for backend development is what I needed to learn earlier",
+        category: "FULLSTACK",
+      },
+      {
+        kind: "LEARNING",
+        topic: "a proper fullstack application process",
+        thoughts:
+          "A fullstack developer often has to jump back and forth from frontend to backend or vice versa. A proper requirement analysis with respect to the Figma design enhances an optimized backend development in such a way that while Frontend integrates, there are no missing fields.",
+        category: "FULLSTACK",
+      },
+      {
         kind: "WORKING",
         topic: "Console Application",
         thoughts:

@@ -13,9 +13,9 @@ export default function MonthlyTimeline() {
             <h2 className="text-white font-semibold text-base">
               {timeline.month}
             </h2>
-            <div className="space-y-2 divide-y divide-neutral-700">
+            <div className="space-y-4 divide-y divide-neutral-800">
               {timeline.activityLog?.map((log) => (
-                <div className="flex items-start gap-2 pt-2">
+                <div className="flex items-start gap-2 pt-4">
                   <div>🚀</div>
                   <div>
                     <p className="text-neutral-300 text-sm font-semibold">
