@@ -1,5 +1,5 @@
 import cn from "@/app/common/helpers/UtilsKit";
-import { BadgeProps } from "@/app/interfaces/uiComponents/BadgeProps";
+import { BadgeProps } from "@/app/interfaces/components/BadgeProps";
 import { cva } from "class-variance-authority";
 
 const DEFAULT_BADGE_STYLES =
