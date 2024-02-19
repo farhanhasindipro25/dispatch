@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import ConvexClientProvider from "./ConvexClientProvider";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -16,7 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <ConvexClientProvider>{children}</ConvexClientProvider></body>
     </html>
   );
 }
