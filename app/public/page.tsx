@@ -1,5 +1,5 @@
+import MonthlyTimeline from "@/app/public/components/ui/MonthlyTimeline";
 import StatsBadge from "@/app/components/ui/StatsBadge";
-import MonthlyTimeline from "./components/ui/MonthlyTimeline";
 
 export default function PublicPage() {
   return (
@@ -14,9 +14,7 @@ export default function PublicPage() {
         <StatsBadge label="worked@" value="REPLIQ Limited" activeColor="red" />
         <StatsBadge label="location" value="Bangladesh" activeColor="green" />
       </div>
-      <div>
-        <MonthlyTimeline />
-      </div>
+      <MonthlyTimeline />
     </div>
   );
 }
