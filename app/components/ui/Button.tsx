@@ -3,7 +3,7 @@ import { ButtonProps } from "@/app/interfaces/components/ButtonProps";
 import { cva } from "class-variance-authority";
 
 const DEFAULT_BUTTON_STYLES =
-  "h-fit inline-flex items-center rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 px-4 py-2 text-sm font-bold cursor-pointer";
+  "h-fit inline-flex items-center rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 px-4 py-2 text-xs md:text-sm font-bold cursor-pointer";
 
 const PRIMARY_BUTTON_STYLES =
   "bg-neutral-950 text-neutral-400 hover:bg-neutral-900 active:bg-neutral-900 focus:bg-neutral-900 focus:ring-neutral-900";

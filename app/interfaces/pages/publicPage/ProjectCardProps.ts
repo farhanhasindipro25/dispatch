@@ -1,5 +1,6 @@
 export interface ProjectCardProps {
   project: {
+    slug: string;
     name: string;
     live_link?: string;
     associated_with?: string;

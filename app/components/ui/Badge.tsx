@@ -3,7 +3,7 @@ import { BadgeProps } from "@/app/interfaces/components/BadgeProps";
 import { cva } from "class-variance-authority";
 
 const DEFAULT_BADGE_STYLES =
-  "w-fit flex items-start gap-2 px-3 py-2 text-sm font-semibold rounded-md border border-neutral-800";
+  "w-fit flex items-start gap-2 px-3 py-2 text-xs md:text-sm font-semibold rounded-md border border-neutral-800";
 const INFO_BADGE_STYLES =
   "bg-neutral-900 text-neutral-400 hover:bg-neutral-800";
 const INFO_ALT_BADGE_STYLES =

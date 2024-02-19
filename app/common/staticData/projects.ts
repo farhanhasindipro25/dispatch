@@ -1,5 +1,6 @@
 export const projects = [
   {
+    slug: "pro-hr",
     name: "ProHR (Prohor)",
     live_link: "https://staging.prohr.io/",
     associated_with: "REPLIQ Limited",
@@ -16,6 +17,7 @@ export const projects = [
     ],
   },
   {
+    slug: "supplers",
     name: "Supplers",
     live_link: "https://staging.supplers.com/",
     associated_with: "REPLIQ Limited",
