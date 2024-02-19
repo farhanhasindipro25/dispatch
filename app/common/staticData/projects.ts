@@ -1,6 +1,6 @@
 export const projects = [
   {
-    slug: "banking-console",
+    slug: "banking-console-app",
     featured: false,
     learning: true,
     name: "Console Banking Application",
@@ -12,7 +12,21 @@ export const projects = [
     doc_link: "",
     role: "",
     tech_stack: ["Javascript", "OOP"],
-    details: [],
+    details: {
+      project_description:
+        "A simple banking application. A bank can have several types of accounts say current account, saving account, salary account etc. An account will have fields like name, number, creation date and balance etc. After starting the application, users will have 8 different choices as input from 1 to 8 through the console.",
+      features: [
+        "Create a new account",
+        "Display all accounts",
+        "Update an account",
+        "Delete an account",
+        "Deposit an amount into your account",
+        "Withdraw an amount from your account",
+        "Search for account",
+        "Exit",
+      ],
+      images: ["/projects/console-app/image1.png"],
+    },
   },
   {
     slug: "pro-hr",
@@ -37,7 +51,23 @@ export const projects = [
       "twilio",
       "Vercel",
     ],
-    details: [],
+    details: {
+      project_description:
+        "A web application to make the job application and recruitment process easier for candidates and HRs respectively.",
+      features: [
+        "Organizations are added as a subdomain. Recruiters can login and setup their company profile. This profile can be shared publicly.",
+        "The public links will have the organization page, the open jobs page and the job details page. To apply for a job, the candidate will need to login to the candidate side under the respective organization’s subdomain.",
+        "Recruiters can post jobs, add video screening questions. The video screening test is a unique addition to save the time of initial interviews.",
+        "Recruiters can review applicants per jobs, add notes, feedbacks, schedule interviews.",
+        "Recruiters can also host interviews in the ProHR platform virtually via video calls developed using Twilio.",
+        "Candidates upon login can setup profiles with dynamic information making job application processes easier.",
+        "Candidates perform a video screening test which is a one-time, one-sided approach where questions appear on screen, and the candidates need to answer them in the video which is recorded. The recruiter sees how much time was allocated for a question and how much time the candidate took.",
+        "Candidates can view application statuses, feedbacks from recruiters and attend video call interviews in the platform.",
+        "Dynamic notification system using a diverse notification matrix.",
+        "Admin panel for global tracking of jobs, interviews, organizations, applicants, and a resume bank with resume bulk upload feature,",
+      ],
+      images: ["/projects/console-app/image1.png"],
+    },
   },
   {
     slug: "supplers",
@@ -62,7 +92,21 @@ export const projects = [
       "Stripe",
       "Vercel",
     ],
-    details: [],
+    details: {
+      project_description:
+        "A simple banking application. A bank can have several types of accounts say current account, saving account, salary account etc. An account will have fields like name, number, creation date and balance etc. After starting the application, users will have 8 different choices as input from 1 to 8 through the console.",
+      features: [
+        "Create a new account",
+        "Display all accounts",
+        "Update an account",
+        "Delete an account",
+        "Deposit an amount into your account",
+        "Withdraw an amount from your account",
+        "Search for account",
+        "Exit",
+      ],
+      images: ["/projects/console-app/image1.png"],
+    },
   },
   {
     slug: "bookling",
@@ -87,7 +131,21 @@ export const projects = [
       "yup",
       "Vercel",
     ],
-    details: [],
+    details: {
+      project_description:
+        "A simple banking application. A bank can have several types of accounts say current account, saving account, salary account etc. An account will have fields like name, number, creation date and balance etc. After starting the application, users will have 8 different choices as input from 1 to 8 through the console.",
+      features: [
+        "Create a new account",
+        "Display all accounts",
+        "Update an account",
+        "Delete an account",
+        "Deposit an amount into your account",
+        "Withdraw an amount from your account",
+        "Search for account",
+        "Exit",
+      ],
+      images: ["/projects/console-app/image1.png"],
+    },
   },
   {
     slug: "the-second-tune",
@@ -116,6 +174,20 @@ export const projects = [
       "Stripe",
       "Vercel",
     ],
-    details: [],
+    details: {
+      project_description:
+        "A simple banking application. A bank can have several types of accounts say current account, saving account, salary account etc. An account will have fields like name, number, creation date and balance etc. After starting the application, users will have 8 different choices as input from 1 to 8 through the console.",
+      features: [
+        "Create a new account",
+        "Display all accounts",
+        "Update an account",
+        "Delete an account",
+        "Deposit an amount into your account",
+        "Withdraw an amount from your account",
+        "Search for account",
+        "Exit",
+      ],
+      images: ["/projects/console-app/image1.png"],
+    },
   },
 ];

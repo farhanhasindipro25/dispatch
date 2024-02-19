@@ -11,6 +11,10 @@ export interface ProjectCardProps {
     doc_link?: string | undefined;
     role?: string | undefined;
     tech_stack: string[];
-    details: string[];
+    details: {
+      project_description: string;
+      features: string[];
+      images: string[];
+    };
   };
 }

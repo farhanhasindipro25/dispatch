@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <Badge variant={featured === true ? "INFO_GREEN" : "INFO_SKY"}>
             {featured === true ? "FEATURED" : "LEARNING"}
           </Badge>
-          <h2 className="text-neutral-300 hover:text-white hover:underline cursor-pointer font-semibold text-sm md:text-base">
+          <h2 className="text-neutral-300 font-semibold text-sm md:text-base">
             {name}
           </h2>
           <h2 className="text-neutral-400 font-medium text-sm md:text-base">
