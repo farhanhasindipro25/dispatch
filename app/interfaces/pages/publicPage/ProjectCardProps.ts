@@ -1,13 +1,16 @@
 export interface ProjectCardProps {
   project: {
     slug: string;
+    featured: boolean;
     name: string;
-    live_link?: string;
-    associated_with?: string;
-    client_code_link?: string;
-    server_code_link?: string;
-    doc_link?: string;
-    role?: string;
+    learning: boolean;
+    live_link?: string | undefined;
+    associated_with?: string | undefined;
+    client_code_link?: string | undefined;
+    server_code_link?: string | undefined;
+    doc_link?: string | undefined;
+    role?: string | undefined;
     tech_stack: string[];
+    details: string[];
   };
 }

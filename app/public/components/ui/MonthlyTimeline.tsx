@@ -17,7 +17,7 @@ export default function MonthlyTimeline() {
               {timeline.activityLog?.map((log) => (
                 <div className="flex items-start gap-2 pt-4">
                   <div>🚀</div>
-                  <div>
+                  <div className="space-y-2">
                     <p className="text-neutral-300 text-sm font-semibold">
                       {generateActivityLogMsg(log.kind, log.topic).synonym}{" "}
                       {generateActivityLogMsg(log.kind, log.topic).topic}.
