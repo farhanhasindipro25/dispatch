@@ -5,6 +5,7 @@ import {
   ArrowTopRightOnSquareIcon,
   CodeBracketIcon,
 } from "@heroicons/react/20/solid";
+import Image from "next/image";
 import Link from "next/link";
 
 import React from "react";
@@ -19,37 +20,53 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     client_code_link,
     server_code_link,
     doc_link,
+    category,
+    cover,
     associated_with,
     role,
     tech_stack,
   } = project;
-  console.log(associated_with);
   return (
     <div className="w-full p-4 rounded-md bg-neutral-900 hover:bg-neutral-800 space-y-4 divide-y divide-neutral-800 hover:divide-neutral-900 border border-neutral-800">
       <div className="flex w-full sm:items-start justify-between flex-col gap-4 sm:gap-0 sm:flex-row">
         <div className="space-y-2">
-          <Badge variant={featured === true ? "INFO_GREEN" : "INFO_SKY"}>
-            {featured === true ? "FEATURED" : "LEARNING"}
-          </Badge>
-          <h2 className="text-neutral-300 font-semibold text-sm md:text-base">
-            {name}
-          </h2>
-          <h2 className="text-neutral-400 font-medium text-sm md:text-base">
-            {role}
-          </h2>
-          {associated_with === "none" ? (
-            <p className="text-xs md:text-sm text-neutral-500 font-medium">
-              Personal Project
-            </p>
-          ) : (
-            <p className="text-xs md:text-sm text-neutral-500 font-medium">
-              Associated with {associated_with}
-            </p>
-          )}
+          <Image
+            src={cover}
+            alt="project-cover"
+            width={1000}
+            height={1000}
+            priority
+            className="object-cover aspect-auto rounded-lg"
+          />
+          <div className="flex justify-between items-start">
+            <div className="space-y-1">
+              <h2 className="text-neutral-300 font-semibold text-sm md:text-base">
+                {name}
+              </h2>
+              <h2 className="text-neutral-400 font-medium text-sm md:text-base">
+                {role}
+              </h2>
+              {associated_with === "none" ? (
+                <p className="text-xs md:text-sm text-neutral-500 font-medium">
+                  Personal Project
+                </p>
+              ) : (
+                <p className="text-xs md:text-sm text-neutral-500 font-medium">
+                  Associated with {associated_with}
+                </p>
+              )}
+              <div className="flex items-center gap-2">
+                {featured === true ? (
+                  <Badge variant="INFO_SKY">FEATURED</Badge>
+                ) : null}
+                <Badge variant="INFO_GREEN">{category}</Badge>
+              </div>
+            </div>
+            <Link href={`/public/projects/${slug}`}>
+              <Button variant="TERTIARY">View Details</Button>
+            </Link>
+          </div>
         </div>
-        <Link href={`/public/projects/${slug}`}>
-          <Button variant="TERTIARY">View Details</Button>
-        </Link>
       </div>
       <div className="flex flex-col md:space-y-0 sm:flex-row justify-start gap-6 pt-4">
         {live_link ? (

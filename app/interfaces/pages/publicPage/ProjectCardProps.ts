@@ -1,9 +1,11 @@
 export interface ProjectCardProps {
   project: {
     slug: string;
+    cover: string;
     featured: boolean;
     name: string;
     learning: boolean;
+    category: string;
     live_link?: string | undefined;
     associated_with?: string | undefined;
     client_code_link?: string | undefined;
@@ -14,7 +16,6 @@ export interface ProjectCardProps {
     details: {
       project_description: string;
       features: string[];
-      images: string[];
     };
   };
 }
