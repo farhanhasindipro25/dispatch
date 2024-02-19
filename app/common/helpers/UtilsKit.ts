@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 export default function cn(...classnames: (string | undefined)[]) {
   return twMerge(clsx(classnames));
 }
-function generateRandomSynonym(kind: ActivityKind): string {
+function generateRandomSynonym(kind: ActivityKind, seed: number): string {
   const synonyms: Record<ActivityKind, string[]> = {
     LEARNING: [
       "Studied",
@@ -43,10 +43,11 @@ function generateRandomSynonym(kind: ActivityKind): string {
   if (!possibleSynonyms || possibleSynonyms.length === 0) {
     return kind;
   }
-  const random = Math.floor(Math.random() * possibleSynonyms.length);
+  const random = seed % possibleSynonyms.length;
   return possibleSynonyms[random];
 }
+
 export function generateActivityLogMsg(kind: ActivityKind, topic: string) {
-  const synonym = generateRandomSynonym(kind);
+  const synonym = generateRandomSynonym(kind, 42);
   return { synonym, topic };
 }
