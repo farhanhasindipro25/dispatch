@@ -1,26 +1,20 @@
-"use client";
-import StatBadges from "./components/StatBadges";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
+import MonthlyTimeline from "@/app/public/components/ui/MonthlyTimeline";
+import StatsBadge from "@/app/components/ui/StatsBadge";
 
 export default function PublicPage() {
-  const logs = useQuery(api.logs.list);
-
   return (
     <div className="space-y-6">
-      <StatBadges />
-      <div>
-        <h2 className="text-white">{logs?.map((log) => (
-          <div key={log._id}>
-            <div>
-              {log.title}
-            </div>
-            <div>
-              {log.body}
-            </div>
-          </div>
-        ))}</h2>
+      <div className="flex flex-wrap justify-center gap-4 md:justify-between">
+        <StatsBadge label="experience" value="02 years" activeColor="green" />
+        <StatsBadge
+          label="openForWork"
+          value="Truthy McTruthFace"
+          activeColor="green"
+        />
+        <StatsBadge label="worked@" value="REPLIQ Limited" activeColor="red" />
+        <StatsBadge label="location" value="Bangladesh" activeColor="green" />
       </div>
+      <MonthlyTimeline />
     </div>
   );
 }

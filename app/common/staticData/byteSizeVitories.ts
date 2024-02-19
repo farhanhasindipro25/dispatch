@@ -42,3 +42,5 @@ export const byteSizeVictories = [
     item: "Maintaining product documentation using Docusaurus.",
   },
 ];
+
+// export default byteSizeVictories;
