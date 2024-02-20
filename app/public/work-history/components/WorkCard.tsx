@@ -1,7 +1,7 @@
 "use client";
 import Badge from "@/app/components/ui/Badge";
 import Button from "@/app/components/ui/Button";
-import { WorkCardProps } from "@/app/interfaces/pages/workHistoryPage/WorkCardProps";
+import { WorkCardProps } from "@/app/interfaces/pages/publicPage/WorkCardProps";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import React, { useState } from "react";
 
