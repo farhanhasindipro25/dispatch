@@ -1,7 +1,7 @@
 "use client";
-import cn from "@/app/common/helpers/UtilsKit";
 import { projects } from "@/app/common/staticData/projects";
 import Badge from "@/app/components/ui/Badge";
+import Breadcrumb from "@/app/components/ui/Breadcrumb";
 import { ProjectCardProps } from "@/app/interfaces/pages/publicPage/ProjectCardProps";
 import { ProjectDetailProps } from "@/app/interfaces/pages/publicPage/ProjectDetailProps";
 import Image from "next/image";
@@ -14,7 +14,13 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
   return (
     <>
       {data ? (
-        <div className="space-y-4">
+        <div className="space-y-8">
+          <Breadcrumb
+            base_page="_projects"
+            base_href="/public/projects"
+            current_page={data.slug}
+            current_href={`/public/projects/${data.slug}`}
+          />
           <div className="space-y-2">
             <Image
               src={data.cover}

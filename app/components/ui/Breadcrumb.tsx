@@ -13,14 +13,14 @@ export default function Breadcrumb({
     <div className="flex items-center gap-2">
       <Link
         href={base_href}
-        className="font-normal text-neutral-500 hover:underline hover:text-white"
+        className="font-medium text-neutral-500 hover:underline text-sm hover:text-white"
       >
         {base_page}
       </Link>
       <ChevronRightIcon className="w-4 h-4 text-neutral-400" />
       <Link
         href={current_href}
-        className="font-medium text-neutral-300 hover:underline hover:text-white"
+        className="font-medium text-neutral-300 hover:underline text-sm hover:text-white"
       >
         {current_page}
       </Link>
