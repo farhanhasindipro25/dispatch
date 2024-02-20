@@ -5,33 +5,34 @@ export const publicPageTabs = [
     key: 1,
     current: true,
   },
-  {
-    label: "_education",
-    href: "/public/education",
-    key: 2,
-    current: false,
-  },
+
   {
     label: "_feats",
     href: "/public/feats",
-    key: 3,
+    key: 2,
     current: false,
   },
   {
     label: "_work",
     href: "/public/work-history",
-    key: 4,
+    key: 3,
     current: false,
   },
   {
     label: "_projects",
     href: "/public/projects",
-    key: 5,
+    key: 4,
     current: false,
   },
   {
     label: "_blogs",
     href: "/public/blogs",
+    key: 5,
+    current: false,
+  },
+  {
+    label: "_education",
+    href: "/public/education",
     key: 6,
     current: false,
   },

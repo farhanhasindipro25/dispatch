@@ -3,8 +3,8 @@ import { EducationCardProps } from "@/app/interfaces/pages/publicPage/educationC
 export default function EducationCard({ education }: EducationCardProps) {
   const { institution, degree, major, grade } = education;
   return (
-    <div className="p-4 w-full rounded-md bg-neutral-900 hover:bg-neutral-800">
-      <div className="flex gap-1 items-center">
+    <div className="p-4 w-full rounded-md bg-neutral-900 hover:bg-neutral-800 space-y-2 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-start items-start gap-1 md:items-center">
         <h2 className="text-neutral-300 font-medium text-sm md:text-base">
           {degree},
         </h2>
@@ -12,12 +12,12 @@ export default function EducationCard({ education }: EducationCardProps) {
           {major}
         </h2>
       </div>
-      <h2 className="text-neutral-400 font-semibold text-sm md:text-base">
-        {institution}
-      </h2>
-      <p className="text-neutral-400 font-normal text-sm md:text-base">
-        Grade: {grade}
-      </p>
+      <div>
+        <h2 className="text-neutral-400 font-semibold text-sm md:text-base">
+          {institution}
+        </h2>
+        <p className="text-neutral-400 font-normal text-sm">Grade: {grade}</p>
+      </div>
     </div>
   );
 }

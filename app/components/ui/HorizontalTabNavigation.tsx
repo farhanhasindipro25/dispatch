@@ -24,7 +24,7 @@ export default function HorizontalTabNavigation({ tabs, current }: any) {
     }
   };
   return (
-    <ul className="flex w-full gap-8 pb-[7.1px] border-b border-neutral-500 mb-6 overflow-x-auto no-scrollbar bg-neutral-950">
+    <ul className="flex w-full gap-6 pb-[7.1px] border-b border-neutral-500 mb-6 overflow-x-auto no-scrollbar bg-neutral-950">
       {tabs.map((tab: TabOptions) => (
         <li key={tab.label}>
           <Link
