@@ -8,7 +8,7 @@ export default function MonthlyTimeline() {
   const logs = useQuery(api.logs.list);
 
   return (
-    <div>
+    <>
       <h2 className="text-neutral-400 underline font-semibold text-sm">
         SO FAR THIS YEAR
       </h2>
@@ -45,6 +45,6 @@ export default function MonthlyTimeline() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
