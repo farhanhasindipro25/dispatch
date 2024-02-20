@@ -10,7 +10,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
   const data: ProjectCardProps["project"] | undefined = projects.find(
     (project) => project.slug === params.slug
   );
-  console.log(data);
+
   return (
     <>
       {data ? (

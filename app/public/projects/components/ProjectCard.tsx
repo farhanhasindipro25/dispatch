@@ -5,6 +5,7 @@ import {
   ArrowTopRightOnSquareIcon,
   CodeBracketIcon,
 } from "@heroicons/react/20/solid";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -63,7 +64,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               </div>
             </div>
             <Link href={`/public/projects/${slug}`}>
-              <Button variant="TERTIARY">View Details</Button>
+              <Button variant="TERTIARY">
+                View Details
+                <ChevronRightIcon className="w-4 h-4 text-neutral-300 hover:translate-x-1 duration-300 ease-in-out" />
+              </Button>
             </Link>
           </div>
         </div>

@@ -1,4 +1,6 @@
+import { blogs } from "@/app/common/staticData/blogs";
 import React from "react";
+import BlogsCard from "./components/BlogsCard";
 
 export default function BlogsPage() {
   return (
@@ -10,9 +12,9 @@ export default function BlogsPage() {
         </h2>
       </div>
       <div className="space-y-6">
-        {/* {educations.map((education) => (
-          <EducationCard key={education.institution} education={education} />
-        ))} */}
+        {blogs.map((blog) => (
+          <BlogsCard key={blog.slug} blog={blog} />
+        ))}
       </div>
     </div>
   );
