@@ -18,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <ConvexClientProvider>{children}</ConvexClientProvider></body>
+        <main>
+          <ConvexClientProvider>{children}</ConvexClientProvider>
+        </main>
+      </body>
     </html>
   );
 }

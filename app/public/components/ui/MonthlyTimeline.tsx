@@ -1,8 +1,9 @@
 "use client";
-import { api } from "@/convex/_generated/api";
+import { api } from "../../../../convex/_generated/api";
 import { useQuery } from "convex/react";
-import { generateActivityLogMsg } from "@/app/common/helpers/UtilsKit"; // Import your utility function
-import monthlyTimelineData from "@/app/common/staticData/monthlyTimelineData";
+import { generateActivityLogMsg } from "../../../common/helpers/UtilsKit";
+import monthlyTimelineData from "../../../common/staticData/monthlyTimelineData";
+import React from "react";
 
 export default function MonthlyTimeline() {
   const logs = useQuery(api.logs.list);
