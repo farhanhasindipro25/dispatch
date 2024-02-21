@@ -1,5 +1,7 @@
 export const onTheWeb = [
   {
+    resume:
+      "https://drive.google.com/file/d/1k4cGuBWNvYY1d3LCh5bWMLR5KYjyFuZ3/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/farhan-hasin-dipro/",
     github: "https://github.com/farhanhasindipro25",
     facebook: "https://www.facebook.com/dipro.farhanhasin",

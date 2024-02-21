@@ -1,4 +1,4 @@
-import { onTheWeb } from "@/app/common/staticData/onTheWeb";
+import { onTheWeb } from "../../common/staticData/onTheWeb";
 import React from "react";
 import OnTheWebCard from "./components/OnTheWebCard";
 

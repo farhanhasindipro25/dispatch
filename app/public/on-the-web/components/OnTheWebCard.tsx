@@ -1,8 +1,10 @@
-import { OnTheWebCardProps } from "@/app/interfaces/pages/publicPage/OnTheWebCardProps";
+import React from "react";
+import { OnTheWebCardProps } from "../../../interfaces/pages/publicPage/OnTheWebCardProps";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export default function OnTheWebCard({ social }: OnTheWebCardProps) {
   const {
+    resume,
     linkedin,
     github,
     facebook,
@@ -19,6 +21,21 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
   return (
     <div className="p-4 w-full rounded-md bg-neutral-900 hover:bg-neutral-800 space-y-4 divide-y divide-neutral-700">
       <div className="flex items-start justify-between">
+        <div>
+          <h2 className="text-neutral-300 text-sm font-medium">Resume</h2>
+          <a
+            target="_blank"
+            href={resume}
+            className="text-sky-600 text-sm font-semibold hover:text-sky-500 hover:underline cursor-pointer"
+          >
+            {resume}
+          </a>
+        </div>
+        <a target="_blank" href={resume}>
+          <ArrowTopRightOnSquareIcon className="w-5 h-5 text-neutral-400 hover:text-neutral-300 cursor-pointer" />
+        </a>
+      </div>
+      <div className="flex items-start justify-between pt-4">
         <div>
           <h2 className="text-neutral-300 text-sm font-medium">Linkedin</h2>
           <a

@@ -1,5 +1,6 @@
 export interface OnTheWebCardProps {
   social: {
+    resume: string;
     linkedin: string;
     github: string;
     facebook?: string;
