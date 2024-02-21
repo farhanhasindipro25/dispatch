@@ -1,7 +1,7 @@
 "use client";
 import Badge from "@/app/components/ui/Badge";
 import Button from "@/app/components/ui/Button";
-import { WorkCardProps } from "@/app/interfaces/pages/workHistoryPage/WorkCardProps";
+import { WorkCardProps } from "@/app/interfaces/pages/publicPage/WorkCardProps";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import React, { useState } from "react";
 
@@ -21,14 +21,16 @@ export default function WorkCard({ work }: WorkCardProps) {
   return (
     <div className="w-full space-y-4 items-end justify-between gap-2 p-4 rounded-md bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 divide-y divide-neutral-800 hover:divide-neutral-900">
       <div className="flex flex-col">
-        <h2 className="text-neutral-300 hover:text-white hover:underline cursor-pointer font-semibold">
+        <h2 className="text-neutral-300 text-sm md:text-base font-semibold">
           {company}
         </h2>
-        <span className="font-normal text-neutral-400 truncate">
+        <span className="font-normal text-sm md:text-base text-neutral-400 truncate">
           {company_description}
         </span>
-        <h2 className="text-neutral-400 font-medium">{position}</h2>
-        <h2 className="text-neutral-500 font-normal">
+        <h2 className="text-neutral-400 font-medium text-sm md:text-base">
+          {position}
+        </h2>
+        <h2 className="text-neutral-500 font-normal text-sm md:text-base">
           {start_date} - {end_date}
         </h2>
       </div>

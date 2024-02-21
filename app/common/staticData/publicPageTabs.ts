@@ -5,6 +5,7 @@ export const publicPageTabs = [
     key: 1,
     current: true,
   },
+
   {
     label: "_feats",
     href: "/public/feats",
@@ -30,9 +31,15 @@ export const publicPageTabs = [
     current: false,
   },
   {
+    label: "_education",
+    href: "/public/education",
+    key: 6,
+    current: false,
+  },
+  {
     label: "_onTheWeb",
     href: "/public/on-the-web",
-    key: 6,
+    key: 7,
     current: false,
   },
 ];
