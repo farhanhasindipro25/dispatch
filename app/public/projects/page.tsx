@@ -6,7 +6,7 @@ export default function ProjectsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h2 className="text-base text-neutral-300 font-semibold">_projects</h2>
-        <h2 className="text-base text-neutral-400 font-medium">
+        <h2 className="text-sm md:text-base text-neutral-400 font-medium">
           _projects.length = 5
         </h2>
       </div>

@@ -8,7 +8,7 @@ export default function WorkHistoryPage() {
         <h2 className="text-base text-neutral-300 font-semibold">
           _workHistory
         </h2>
-        <h2 className="text-base text-neutral-400 font-medium">
+        <h2 className="text-sm md:text-base text-neutral-400 font-medium">
           _workHistory.length = 5
         </h2>
       </div>

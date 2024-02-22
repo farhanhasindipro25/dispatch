@@ -7,7 +7,7 @@ export default function BlogsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h2 className="text-base text-neutral-300 font-semibold">_blogs</h2>
-        <h2 className="text-base text-neutral-400 font-medium">
+        <h2 className="text-sm md:text-base text-neutral-400 font-medium">
           _blogs.length = 3
         </h2>
       </div>

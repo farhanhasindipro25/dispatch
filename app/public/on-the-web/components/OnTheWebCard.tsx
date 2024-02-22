@@ -21,7 +21,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
   return (
     <div className="p-4 w-full rounded-md bg-neutral-900 hover:bg-neutral-800 space-y-4 divide-y divide-neutral-700">
       <div className="flex items-start justify-between">
-        <div>
+        <div className="truncate">
           <h2 className="text-neutral-300 text-sm font-medium">Resume</h2>
           <a
             target="_blank"
@@ -36,7 +36,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
         </a>
       </div>
       <div className="flex items-start justify-between pt-4">
-        <div>
+        <div className="truncate">
           <h2 className="text-neutral-300 text-sm font-medium">Linkedin</h2>
           <a
             target="_blank"
@@ -51,7 +51,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
         </a>
       </div>
       <div className="flex items-start justify-between pt-4">
-        <div>
+        <div className="truncate">
           <h2 className="text-neutral-300 text-sm font-medium">Github</h2>
           <a
             target="_blank"
@@ -67,7 +67,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       </div>
       {facebook && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">Facebook</h2>
             <a
               target="_blank"
@@ -84,7 +84,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {twitter && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">Twitter</h2>
             <a
               target="_blank"
@@ -101,7 +101,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {hashnode && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">Hashnode</h2>
             <a
               target="_blank"
@@ -118,7 +118,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {medium && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">Medium</h2>
             <a
               target="_blank"
@@ -135,7 +135,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {personal_portfolio && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">
               Personal portfolio
             </h2>
@@ -154,7 +154,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {behance && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">Behance</h2>
             <a
               target="_blank"
@@ -171,7 +171,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {dribble && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">Dribble</h2>
             <a
               target="_blank"
@@ -188,7 +188,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {hackerRank && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">HackerRank</h2>
             <a
               target="_blank"
@@ -205,7 +205,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {leetCode && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">LeetCode</h2>
             <a
               target="_blank"
@@ -222,7 +222,7 @@ export default function OnTheWebCard({ social }: OnTheWebCardProps) {
       )}
       {codePen && (
         <div className="flex items-start justify-between pt-4">
-          <div>
+          <div className="truncate">
             <h2 className="text-neutral-300 text-sm font-medium">Codepen</h2>
             <a
               target="_blank"
