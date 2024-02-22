@@ -6,7 +6,7 @@ export const projects = [
     learning: true,
     category: "BACKEND",
     name: "Gadget Management Server",
-    live_link: "https://gadget-management-server-ten.vercel.app/",
+    live_link: "",
     associated_with: "none",
     client_code_link: "",
     server_code_link:
