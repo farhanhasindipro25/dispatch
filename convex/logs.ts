@@ -6,17 +6,17 @@ import { paginationOptsValidator } from "convex/server";
 export const getLogs = query({
   args: { paginationOpts: paginationOptsValidator },
   handler: async (ctx, { paginationOpts }) => {
-    const logs = await ctx.db.query("logs").order("desc").paginate(paginationOpts);
-    const logsWithTags = await Promise.all(logs.page.map(async (log) => {
+    const result = await ctx.db.query("logs").order("asc").paginate(paginationOpts);
+    const page = await Promise.all(result.page.map(async (log) => {
       const tagIds = await ctx.db.query("log_tags").withIndex("by_log_id", q => q.eq("log_id", log._id)).collect();
       const tags = await Promise.all(tagIds.map(async (tagId) => {
-        return ctx.db.get(tagId._id)
+        return ctx.db.get(tagId.tag_id)
       }))
       const logWithTag = { ...log, tags }
       return logWithTag
     }));
 
-    return logsWithTags.reverse();
+    return { ...result, page};
   },
 });
 
