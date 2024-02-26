@@ -9,7 +9,7 @@ export default function MonthlyTimeline() {
   const { results, status, loadMore } = usePaginatedQuery(
     api.logs.getLogs,
     {},
-    { initialNumItems: 1 }
+    { initialNumItems: 5 }
   );
   return (
     <>
