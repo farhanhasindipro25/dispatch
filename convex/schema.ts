@@ -29,7 +29,8 @@ export default defineSchema({
     name: v.string(),
     avatar: v.string(),
     description: v.string(),
-    tokenIdentifier: v.string(),
+    // TODO:
+    tokenIdentifier: v.optional(v.string()),
   }).index("by_token", ["tokenIdentifier"]),
   siteConfig: defineTable({
     title: v.string(),
