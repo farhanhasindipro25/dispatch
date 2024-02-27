@@ -6,8 +6,6 @@ import monthlyTimelineData from "../../../common/staticData/monthlyTimelineData"
 import React from "react";
 
 export default function MonthlyTimeline() {
-  const logs = useQuery(api.logs.list);
-
   return (
     <>
       <h2 className="text-neutral-400 underline font-semibold text-sm">

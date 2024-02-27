@@ -19,7 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <main>
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+          {children}
+          {/* <ConvexClientProvider></ConvexClientProvider> */}
         </main>
       </body>
     </html>
