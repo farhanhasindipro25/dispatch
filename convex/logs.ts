@@ -16,7 +16,7 @@ export const getLogs = query({
       return logWithTag
     }));
 
-    return { ...result, page};
+    return { ...result, page };
   },
 });
 
@@ -58,12 +58,31 @@ export const getTags = query({
 
 
 // Mutations
-export const create = mutation({
-  args: { body: v.string(), user: v.id('users'), title: v.string(), },
-  handler: async (ctx, { user, body, title }) => {
-    await ctx.db.insert("logs", {
-      user, body, title,
-      type: LogType.Blog,
-    });
+export const createLog = mutation({
+  args: {
+    user: v.id('users'),
+    body: v.string(),
+    title: v.string(),
+    type: v.union(
+      v.literal(LogType.Blog),
+      v.literal(LogType.Achievements),
+      v.literal(LogType.Log),
+      v.literal(LogType.Projects),
+      v.literal(LogType.Work),
+      v.literal(LogType.Socials),
+    ),
+    tag_id_list: v.array(v.id('tags')),
+  },
+  handler: async (ctx, args) => {
+    const { tag_id_list, ...log } = args;
+    const savedLogId = await ctx.db.insert("logs", log);
+    await Promise.all(tag_id_list.map((tag) => ctx.db.insert('log_tags', {
+        log_id: savedLogId,
+        tag_id: tag
+      })
+    ))
+    return {
+      message: 'Log Saved'
+    }
   },
 });
