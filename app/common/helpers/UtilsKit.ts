@@ -30,6 +30,11 @@ function generateRandomSynonym(kind: ActivityKind, seed: number): string {
       "Documented features and codebase of",
     ],
     WORKING: ["Worked on a", "Executed tasks on a", "Engaged on a"],
+    COMFORTABLE: [
+      "Started getting comfortable on working with",
+      "Getting used to working with",
+    ],
+    PARTICIPATED: ["Took part in a", "Participated in a"],
     DEBUGGING: [
       "Fixed issues of",
       "Troubleshooted problems of",
