@@ -1,42 +1,41 @@
-import { LogType } from "@/types";
 import { api } from "./_generated/api";
 import { internalMutation, type MutationCtx } from "./_generated/server";
 import { Id } from "./_generated/dataModel";
-// const user = {
-//   avatar: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAB4FBMVEX///+VnKLUih0AAAD5tqb1woPR1dgCAwf+6JOYn6XxXF7/5cK0tLQkJCcAAAbXjB16wEPX2947PT//vKz5+fnv7+/g4ODw8PD/7MgAAAnbjx1DREaRl53p6em7u7udoqjLy8uIiImVlZaenp9yd3x8gYaGi5HExMRpbXIRAABw",
-// }
+
 const data = [
-    {
-      "body": "This is a blog post about my recent trip.",
-      "title": "My Travel Experience",
-      "type": 0
-    },
-    {
-      "body": "Today, I achieved a milestone in my project.",
-      "title": "Project Milestone Reached",
-      "type": 0
-    },
-    {
-      "body": "Daily log: Worked on debugging the software.",
-      "title": "Debugging Session",
-      "type": 1
-    },
-    {
-      "body": "Completed my latest project successfully.",
-      "title": "Project Completion",
-      "type": 0
-    },
-    {
-      "body": "Attended a networking event.",
-      "title": "Networking Event",
-      "type": 2
-    },
-    {
-      "body": "Today's work update: Completed coding the new feature.",
-      "title": "New Feature Development",
-      "type": 3
-    }
+  {
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ex hendrerit, vehicula lorem non, sollicitudin velit.",
+    "title": "My First Blog Post",
+    "type": 0
+  },
+  {
+    "body": "I achieved my goal of running a marathon! It was an amazing experience.",
+    "title": "Marathon Achievement",
+    "type": 1
+  },
+  {
+    "body": "Today's log: Worked on implementing new features for the project. Progress is steady.",
+    "title": "Project Work Log",
+    "type": 2
+  },
+  {
+    "body": "Excited to announce the launch of my new project! Check it out at example.com",
+    "title": "New Project Launch",
+    "type": 3
+  },
+  {
+    "body": "Attended a networking event today and met some interesting people. Looking forward to collaborating with them.",
+    "title": "Networking Event",
+    "type": 5
+  }
 ] as const;
+function getRandomSlice(list: Array<Id<'tags'>>) {
+  const startIndex = Math.floor(Math.random() * list.length);
+  const endIndex = Math.floor(Math.random() * (list.length - startIndex)) + startIndex;
+  return list.slice(startIndex, endIndex + 1);
+}
+
+const tags = ["k174vdxsd0dhrar87vr5qr65456m6n4h", "k17aerrr8dbhpcp4rf9xpewh2s6m75kg", "k176e055sxseb93k3vh2692wc96m7h4g", "k178kc8pz86gazrm9ck6byzc6n6m6nr3"] as  Array<Id<'tags'>>;
 export default internalMutation({
   handler: async (ctx: MutationCtx) => {
     // If this project already has a populated database, do nothing
@@ -44,11 +43,11 @@ export default internalMutation({
     if (anyMessage) return;
 
     // If not, post each of the seed messages with the given delay
-    for (const { body , title, type } of data) {
-      await ctx.scheduler.runAfter(10, api.logs.create, {
-        body,
-        title,
-        user: "jh70f4pqejada669kwy5v73a0s6kqq5q" as Id<"users">
+    for (const item of data) {
+      await ctx.scheduler.runAfter(10, api.logs.createLog, {
+        ...item,
+        user: "jh70f4pqejada669kwy5v73a0s6kqq5q" as Id<"users">,
+        tag_id_list: getRandomSlice(tags),
       });
     }
   },
