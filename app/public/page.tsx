@@ -1,3 +1,5 @@
+"use client";
+
 import MonthlyTimeline from "@/app/public/components/ui/MonthlyTimeline";
 import StatsBadge from "@/app/components/ui/StatsBadge";
 
