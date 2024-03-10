@@ -12,6 +12,7 @@
     "predev": "convex dev --run init --until-success"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
