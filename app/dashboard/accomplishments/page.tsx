@@ -3,7 +3,7 @@ import ComingSoonSkeleton from "../components/ComingSoonSkeleton";
 
 export default function DashboardAccomplishmentManagementPage() {
   return (
-    <div className="flex flex-col space-y-8 py-6 min-h-screen">
+    <div className="flex flex-col max-w-7xl mx-auto px-4 space-y-8 py-6 min-h-screen">
       <h2 className="text-neutral-400 font-normal text-center italic">
         Accomplishment Management will release in{" "}
         <span className="font-bold">version 0.2</span>

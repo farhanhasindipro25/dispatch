@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }: PageLayoutProps) {
       <AuthedNavbar />
       <div className="max-w-9xl px-4">
         <HorizontalTabNavigation tabs={tabs} current={currentTab} />
-        <div className="min-h-screen max-w-7xl mx-auto px-4">{children}</div>
+        <div className="min-h-screen">{children}</div>
       </div>
     </div>
   );
