@@ -4,7 +4,7 @@ import React from "react";
 
 export default function AuthedNavbar() {
   return (
-    <div className="bg-neutral-950 border-b border-neutral-800">
+    <div className="bg-neutral-950">
       <div className="p-4 max-w-9xl mx-auto flex justify-between items-center gap-4">
         <Link className="flex items-center gap-2" href="/dashboard">
           <Image
