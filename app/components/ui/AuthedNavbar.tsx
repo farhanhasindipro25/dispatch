@@ -11,7 +11,7 @@ export default function AuthedNavbar() {
             src="/logo/alt logo.svg"
             width={2160}
             height={1080}
-            alt="RGC Logo"
+            alt="Dispatch Logo"
             className="cursor-pointer h-5 w-5"
           />
           <h2 className="font-semibold italic text-sm text-gray-300">
@@ -22,7 +22,7 @@ export default function AuthedNavbar() {
           src="/images/user.jpg"
           width={2160}
           height={1080}
-          alt="RGC Logo"
+          alt="Dispatch Logo"
           className="cursor-pointer aspect-auto object-cover rounded-full h-10 w-10"
         />
       </div>

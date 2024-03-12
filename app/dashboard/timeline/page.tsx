@@ -13,7 +13,7 @@ export default function DashboardTimelineManagementPage() {
     return Component ? <Component {...props} /> : null;
   }
   return (
-    <div className="py-6 w-full h-screen">
+    <div className="py-6 w-full h-full">
       <RunningYearsCalendar
         tabs={tabs}
         current={currentTab}
