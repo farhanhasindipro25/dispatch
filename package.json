@@ -12,15 +12,20 @@
     "predev": "convex dev --run init --until-success"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "convex": "^1.9.0",
+    "formik": "^2.4.5",
     "next": "14.1.0",
     "npm-run-all": "^4.1.5",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.2.1"
+    "react-select": "^5.8.0",
+    "react-textarea-autosize": "^8.5.3",
+    "tailwind-merge": "^2.2.1",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",
