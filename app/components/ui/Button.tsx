@@ -13,6 +13,8 @@ const TERTIARY_BUTTON_STYLES =
   "text-neutral-400 active:bg-neutral-500 hover:text-white underline focus:bg-neutral-500 focus:ring-neutral-500 p-0";
 const ACCENT_BUTTON_STYLES =
   "text-neutral-400 bg-black active:bg-neutral-500 hover:text-neutral-300 border border-neutral-400 focus:bg-neutral-500 focus:ring-neutral-500";
+const ALT_PRIMARY_BUTTON_STYLES =
+  "text-neutral-400 bg-neutral-900 border border-neutral-800 active:bg-neutral-900 focus:bg-neutral-900 focus:ring-neutral-900";
 
 const SKELETON_BUTTON_STYLES = "bg-gray-200 text-gray-200";
 
@@ -23,6 +25,7 @@ const BUTTON_VARIANTS = cva(DEFAULT_BUTTON_STYLES, {
       SECONDARY: SECONDARY_BUTTON_STYLES,
       TERTIARY: TERTIARY_BUTTON_STYLES,
       ACCENT: ACCENT_BUTTON_STYLES,
+      ALT_PRIMARY: ALT_PRIMARY_BUTTON_STYLES,
     },
   },
 });
