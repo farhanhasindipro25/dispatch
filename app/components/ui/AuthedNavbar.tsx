@@ -15,7 +15,7 @@ export default function AuthedNavbar() {
             className="cursor-pointer h-5 w-5"
           />
           <h2 className="font-semibold italic text-sm text-gray-300">
-            DISPATCH
+            DISPATCH <span className="text-xs text-white">(v-MVP)</span>
           </h2>
         </Link>
         <Image

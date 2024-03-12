@@ -4,15 +4,13 @@ import React from "react";
 import { SelectFieldProps } from "@/app/interfaces/components/SelectFieldProps";
 
 const SELECT_LABEL_STYLES =
-  "appearance-none block text-sm font-medium text-gray-700";
+  "appearance-none block text-sm font-medium text-neutral-300";
 
 const customStyles = {
   control: (provided: any, state: any) => ({
     ...provided,
-    borderColor: state.isFocused ? "rgb(124, 58, 237)" : provided.borderColor,
-    boxShadow: state.isFocused
-      ? "0 0 0 2px rgb(124, 58, 237)"
-      : provided.boxShadow,
+    borderColor: state.isFocused ? "rgb(0,0,0)" : provided.borderColor,
+    boxShadow: state.isFocused ? "0 0 0 2px rgb(0, 0, 0)" : provided.boxShadow,
     border: state.isFocused ? "none" : provided.border,
     paddingTop: "3px",
     paddingBottom: "5px",
@@ -22,14 +20,14 @@ const customStyles = {
     ...provided,
     backgroundColor:
       (state.isFocused || state.isSelected) && !state.isMulti
-        ? "rgb(124, 58, 237)"
+        ? "rgb(0,0,0)"
         : provided.backgroundColor,
     color:
       (state.isFocused || state.isSelected) && !state.isMulti
         ? "white"
-        : "rgb(139, 92, 246)",
+        : "rgb(0,0,0)",
     "&:hover": {
-      backgroundColor: "rgb(139, 92, 246)",
+      backgroundColor: "rgb(0,0,0)",
       color: "white",
       cursor: "pointer",
     },
@@ -38,7 +36,7 @@ const customStyles = {
   }),
   singleValue: (provided: any) => ({
     ...provided,
-    color: "rgb(124, 58, 237)",
+    color: "rgb(0,0,0)",
   }),
   menu: (provided: any) => ({
     ...provided,

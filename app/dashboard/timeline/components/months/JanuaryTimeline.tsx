@@ -14,7 +14,7 @@ export default function JanuaryTimeline() {
           Manage your January timeline
         </h2>
         <div className="flex items-center gap-4">
-          <Button
+          {/* <Button
             variant="ACCENT"
             onClick={() => setEssentialsDrawerOpen(true)}
           >
@@ -25,7 +25,7 @@ export default function JanuaryTimeline() {
             onClick={() => setEssentialsDrawerOpen(true)}
           >
             Add Activity
-          </Button>
+          </Button> */}
         </div>
         <RightSideDrawer
           open={essentialsDrawerOpen}

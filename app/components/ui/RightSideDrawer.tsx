@@ -16,7 +16,7 @@ function RightSideDrawer({ open, setOpen, children, ...props }: any) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 z-10 bg-neutral-950 bg-opacity-25" />
+          <div className="fixed inset-0 z-10 bg-black bg-opacity-25" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-20 flex justify-end">
@@ -29,7 +29,7 @@ function RightSideDrawer({ open, setOpen, children, ...props }: any) {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="relative flex flex-col w-full max-w-sm pb-12 overflow-y-auto bg-black ">
+            <Dialog.Panel className="relative flex flex-col w-full max-w-sm pb-12 overflow-y-auto bg-neutral-900 ">
               <div className="flex items-center justify-between p-4 border-b border-neutral-700">
                 <div className="flex items-center gap-2">
                   <Image
