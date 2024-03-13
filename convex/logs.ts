@@ -35,7 +35,7 @@ export const getMyLogs = authQuery({
     if (!user) {
       return { isDone: true, page: [], continueCursor: '' };
     }
-    const result = await ctx.db.query("logs").order("asc").filter(q=> q.eq(q.field('user'), user?._id)).paginate(paginationOpts);
+    const result = await ctx.db.query("logs").order("desc").filter(q=> q.eq(q.field('user'), user?._id)).paginate(paginationOpts);
     const page = await Promise.all(result.page.map(async (log) => {
       const tagIds = await ctx.db.query("log_tags").withIndex("by_log_id", q => q.eq("log_id", log._id)).collect();
       const tags = await Promise.all(tagIds.map(async (tagId) => {
