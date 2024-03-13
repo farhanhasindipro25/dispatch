@@ -3,11 +3,12 @@ import { query } from "./_generated/server";
 import { ConvexError, v } from "convex/values";
 import { paginationOptsValidator } from "convex/server";
 import { authMutation, authQuery } from "./util";
+import { Id } from "./_generated/dataModel";
 
 export const getLogs = query({
   args: { paginationOpts: paginationOptsValidator, userId: v.string() },
   handler: async (ctx, { paginationOpts, userId }) => {
-    const user = await ctx.db.query("users").withIndex("by_token", (q) => q.eq("tokenIdentifier", userId)).first();
+    const user = await ctx.db.get(userId as Id<'users'>);
     
     if (!user) {
       return {isDone: true, page: [], continueCursor: ''};

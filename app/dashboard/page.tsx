@@ -47,7 +47,7 @@ export default function DashboardTimelineManagementPage() {
         </RightSideDrawer>
       </div>
       <div>
-        <TimelineListView userId={user?.id}/>
+        <TimelineListView isPublic={false}/>
       </div>
     </div>
   );

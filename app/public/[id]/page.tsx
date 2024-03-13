@@ -4,7 +4,7 @@ import StatsBadge from "@/app/components/ui/StatsBadge";
 export default function PublicPage({ params }: { params: { id: string } }) {
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap justify-center gap-4 md:justify-between">
+      {/* <div className="flex flex-wrap justify-center gap-4 md:justify-between">
         <StatsBadge label="experience" value="02 years" activeColor="green" />
         <StatsBadge
           label="openForWork"
@@ -13,8 +13,8 @@ export default function PublicPage({ params }: { params: { id: string } }) {
         />
         <StatsBadge label="worked@" value="REPLIQ Limited" activeColor="red" />
         <StatsBadge label="location" value="Bangladesh" activeColor="green" />
-      </div>
-      <MonthlyTimeline />
+      </div> */}
+      <MonthlyTimeline userId={params.id} isPublic={true}/>
     </div>
   );
 }

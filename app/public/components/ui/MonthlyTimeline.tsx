@@ -4,10 +4,9 @@ import { api } from "../../../../convex/_generated/api";
 import { usePaginatedQuery } from "convex/react";
 import React from "react";
 
-export default function MonthlyTimeline({ userId }: { userId: string}) {
-  // console.log(userId)
-  const args = userId ? { userId } : {};
-  const query = userId ? api.logs.getLogs : api.logs.getMyLogs;
+export default function MonthlyTimeline({ userId, isPublic }: { userId: string, isPublic: boolean}) {
+  const args = isPublic ? { userId } : {};
+  const query = isPublic ? api.logs.getLogs : api.logs.getMyLogs;
   const { results, status, loadMore } = usePaginatedQuery(
     query,
     args,
