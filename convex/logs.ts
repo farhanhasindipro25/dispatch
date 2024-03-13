@@ -2,6 +2,7 @@ import { LogType } from "@/types";
 import { query, mutation } from "./_generated/server";
 import { v } from "convex/values";
 import { paginationOptsValidator } from "convex/server";
+import { authMutation } from "./util";
 
 export const getLogs = query({
   args: { paginationOpts: paginationOptsValidator },
@@ -53,14 +54,13 @@ export const getTagWithLogs = query({
 
 export const getTags = query({
   args: {},
-  handler: (ctx) => ctx.db.query("tags").collect(),
+  handler: async (ctx) => await ctx.db.query("tags").collect(),
 });
 
 
 // Mutations
-export const createLog = mutation({
+export const createLog = authMutation({
   args: {
-    user: v.id('users'),
     body: v.string(),
     title: v.string(),
     type: v.union(
@@ -75,7 +75,7 @@ export const createLog = mutation({
   },
   handler: async (ctx, args) => {
     const { tag_id_list, ...log } = args;
-    const savedLogId = await ctx.db.insert("logs", log);
+    const savedLogId = await ctx.db.insert("logs", { ...log , user: ctx.user._id });
     await Promise.all(tag_id_list.map((tag) => ctx.db.insert('log_tags', {
         log_id: savedLogId,
         tag_id: tag
