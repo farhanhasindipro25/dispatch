@@ -112,7 +112,3 @@ import {
   
     return user;
   }
-  
-  export const getUser = async (ctx: QueryCtx | MutationCtx | ActionCtx) => {
-    return await ctx.auth.getUserIdentity();
-  };

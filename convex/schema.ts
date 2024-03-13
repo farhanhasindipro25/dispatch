@@ -7,14 +7,14 @@ export default defineSchema({
     user: v.id('users'),
     body: v.string(),
     title: v.string(),
-    type: v.union(
+    type: v.optional(v.union(
       v.literal(LogType.Blog),
       v.literal(LogType.Achievements),
       v.literal(LogType.Log),
       v.literal(LogType.Projects),
       v.literal(LogType.Work),
       v.literal(LogType.Socials),
-    ),
+    )),
   })
     .index('by_type', ['type']),
   log_tags: defineTable({

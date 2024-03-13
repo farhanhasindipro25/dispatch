@@ -4,17 +4,17 @@ import { api } from "../../../../convex/_generated/api";
 import { usePaginatedQuery } from "convex/react";
 import React from "react";
 
-export default function MonthlyTimeline() {
+export default function MonthlyTimeline({ userId }: { userId: string}) {
+  // console.log(userId)
+  const args = userId ? { userId } : {};
+  const query = userId ? api.logs.getLogs : api.logs.getMyLogs;
   const { results, status, loadMore } = usePaginatedQuery(
-    api.logs.getLogs,
-    {},
+    query,
+    args,
     { initialNumItems: 5 }
   );
   return (
     <>
-      <h2 className="text-neutral-400 underline font-semibold text-sm">
-        SO FAR THIS YEAR
-      </h2>
       <div className="divide-y divide-neutral-700 space-y-6">
         {results?.map((log) => (
           <div className="pt-6 space-y-4">
@@ -44,7 +44,7 @@ export default function MonthlyTimeline() {
           </div>
         ))}
         {status === "CanLoadMore" && (
-          <Button variant="ACCENT" onClick={() => loadMore(5)}>
+          <Button className="block m-auto mt-6" variant="SECONDARY" onClick={() => loadMore(5)}>
             Load More
           </Button>
         )}

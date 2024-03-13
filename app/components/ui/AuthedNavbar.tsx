@@ -1,3 +1,4 @@
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -18,13 +19,7 @@ export default function AuthedNavbar() {
             DISPATCH <span className="text-xs text-white">(v-MVP)</span>
           </h2>
         </Link>
-        <Image
-          src="/images/user.jpg"
-          width={2160}
-          height={1080}
-          alt="Dispatch Logo"
-          className="cursor-pointer aspect-auto object-cover rounded-full h-10 w-10"
-        />
+        <UserButton afterSignOutUrl="/"/>
       </div>
     </div>
   );

@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
-import Button from "./components/ui/Button";
+import React, { useState } from "react";
+import Button from "@/app/components/ui/Button";
+import MyDialog from "@/app/components/ui/Dialog";
+import Link from "next/link";
+import { SignIn, useSession } from "@clerk/nextjs";
 
 export default function Home() {
+  const { isSignedIn } = useSession();
+  const [openSignIn, setSignin] = useState(false);
   return (
     <div className="p-4 bg-neutral-950 min-h-screen">
       <div className="max-w-7xl mx-auto px-4">
@@ -34,7 +41,17 @@ export default function Home() {
               </span>
             </p>
             <div className="flex justify-center">
-              <Button variant="ALT_PRIMARY">GET STARTED</Button>
+              { isSignedIn ? <Link
+              href="dashboard">
+                <Button variant="ALT_PRIMARY">GET STARTED</Button>
+              </Link>: 
+              <Button variant="ALT_PRIMARY" onClick={() => setSignin(true)}>GET STARTED</Button>
+              }
+              {openSignIn && <MyDialog onClose={()=>setSignin(false)}>
+                <SignIn 
+                  redirectUrl='/dashboard'
+                />
+              </MyDialog>}
             </div>
           </div>
           <div className="space-y-4">

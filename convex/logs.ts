@@ -1,13 +1,40 @@
 import { LogType } from "@/types";
-import { query, mutation } from "./_generated/server";
-import { v } from "convex/values";
+import { query } from "./_generated/server";
+import { ConvexError, v } from "convex/values";
 import { paginationOptsValidator } from "convex/server";
-import { authMutation } from "./util";
+import { authMutation, authQuery } from "./util";
 
 export const getLogs = query({
+  args: { paginationOpts: paginationOptsValidator, userId: v.string() },
+  handler: async (ctx, { paginationOpts, userId }) => {
+    const user = await ctx.db.query("users").withIndex("by_token", (q) => q.eq("tokenIdentifier", userId)).first();
+    
+    if (!user) {
+      return {isDone: true, page: [], continueCursor: ''};
+    }
+
+    const result = await ctx.db.query("logs").filter(q=> q.eq(q.field('user'), user?._id)).order("desc").paginate(paginationOpts);
+    const page = await Promise.all(result.page.map(async (log) => {
+      const tagIds = await ctx.db.query("log_tags").withIndex("by_log_id", q => q.eq("log_id", log._id)).collect();
+      const tags = await Promise.all(tagIds.map(async (tagId) => {
+        return ctx.db.get(tagId.tag_id)
+      }))
+      const logWithTag = { ...log, tags }
+      return logWithTag
+    }));
+
+    return { ...result, page };
+  },
+});
+
+export const getMyLogs = authQuery({
   args: { paginationOpts: paginationOptsValidator },
   handler: async (ctx, { paginationOpts }) => {
-    const result = await ctx.db.query("logs").order("asc").paginate(paginationOpts);
+    const user = ctx.user;
+    if (!user) {
+      return { isDone: true, page: [], continueCursor: '' };
+    }
+    const result = await ctx.db.query("logs").order("asc").filter(q=> q.eq(q.field('user'), user?._id)).paginate(paginationOpts);
     const page = await Promise.all(result.page.map(async (log) => {
       const tagIds = await ctx.db.query("log_tags").withIndex("by_log_id", q => q.eq("log_id", log._id)).collect();
       const tags = await Promise.all(tagIds.map(async (tagId) => {
@@ -63,14 +90,14 @@ export const createLog = authMutation({
   args: {
     body: v.string(),
     title: v.string(),
-    type: v.union(
+    type: v.optional(v.union(
       v.literal(LogType.Blog),
       v.literal(LogType.Achievements),
       v.literal(LogType.Log),
       v.literal(LogType.Projects),
       v.literal(LogType.Work),
       v.literal(LogType.Socials),
-    ),
+    )),
     tag_id_list: v.array(v.id('tags')),
   },
   handler: async (ctx, args) => {

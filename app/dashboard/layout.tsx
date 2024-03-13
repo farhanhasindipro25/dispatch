@@ -11,10 +11,12 @@ export default function DashboardLayout({ children }: PageLayoutProps) {
   const [currentTab] = useState(1);
   return (
     <div className="space-y-4 bg-neutral-950">
-      <AuthedNavbar />
-      <div className="max-w-9xl px-4">
-        <HorizontalTabNavigation tabs={tabs} current={currentTab} />
-        <div className="min-h-screen">{children}</div>
+      <div className="max-w-5xl m-auto ">
+        <AuthedNavbar />
+        <div className="px-4">
+          {/* <HorizontalTabNavigation tabs={tabs} current={currentTab} /> */}
+          <div className="min-h-screen">{children}</div>
+        </div>
       </div>
     </div>
   );
