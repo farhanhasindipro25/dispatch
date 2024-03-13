@@ -18,7 +18,7 @@ export default function ActivityForm({ onSubmit }) {
     createLog({body, title, type: Number(type), tag_id_list: selTags})
     onSubmit()
   }
-  console.log(Object.values(LogType))
+
   return (
     <div className="space-y-4">
       <SelectField
