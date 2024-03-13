@@ -46,7 +46,6 @@ export default internalMutation({
     for (const item of data) {
       await ctx.scheduler.runAfter(10, api.logs.createLog, {
         ...item,
-        user: "jh70f4pqejada669kwy5v73a0s6kqq5q" as Id<"users">,
         tag_id_list: getRandomSlice(tags),
       });
     }
