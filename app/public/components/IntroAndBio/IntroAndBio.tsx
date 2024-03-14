@@ -2,6 +2,8 @@
 import { publicPageTabs } from "@/app/common/staticData/publicPageTabs";
 import HorizontalTabNavigation from "@/app/components/ui/HorizontalTabNavigation";
 import { HorizontalTabProps } from "@/app/interfaces/components/HorizontalTabProps";
+import { api } from "@/convex/_generated/api";
+import { useQuery } from "convex/react";
 import Image from "next/image";
 
 import React, { useState } from "react";
@@ -9,12 +11,13 @@ import React, { useState } from "react";
 export default function IntroAndBio() {
   const tabs: HorizontalTabProps[] = publicPageTabs;
   const [currentTab] = useState(1);
+  const user = useQuery(api.users.getMyUser);
   return (
     <div className="space-y-12 bg-neutral-950 md:top-[100px] pt-6">
       <div className="max-w-2xl mx-auto px-4 space-y-8">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           <Image
-            src="/images/user.jpg"
+            src={user?.avatar || ""}
             width={1000}
             height={1000}
             alt="user"
@@ -35,9 +38,9 @@ export default function IntroAndBio() {
             </h3>
           </div>
         </div>
-        <div>
+        {/* <div>
           <HorizontalTabNavigation tabs={tabs} current={currentTab} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
