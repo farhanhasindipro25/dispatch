@@ -12,6 +12,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PencilSquareIcon } from "@heroicons/react/20/solid";
 import AutoSizeTextAreaField from "../components/ui/AutoSizeTextAreaField";
+import TextInputField from "../components/ui/TextInputField";
 
 export default function DashboardTimelineManagementPage() {
   const [essentialsDrawerOpen, setEssentialsDrawerOpen] = useState(false);
@@ -55,13 +56,21 @@ export default function DashboardTimelineManagementPage() {
           <ActivityForm onSubmit={() => setActivityDrawerOpen(false)} />
         </RightSideDrawer>
         <RightSideDrawer open={bioDrawerPen} setOpen={setBioDrawerPen}>
-          <AutoSizeTextAreaField
-            name="bio"
-            id="bio"
-            label="Bio"
-            minRows={3}
-            placeholder="Add a short bio about yourself"
-          />
+          <div className="space-y-4">
+            <TextInputField
+              name="name"
+              id="name"
+              label="Name"
+              placeholder="e.g. _farhanHasinDipro. Make it look cool ;)"
+            />
+            <AutoSizeTextAreaField
+              name="bio"
+              id="bio"
+              label="Bio"
+              minRows={3}
+              placeholder="Add a short bio about yourself"
+            />
+          </div>
         </RightSideDrawer>
       </div>
       <div>
@@ -86,7 +95,7 @@ export default function DashboardTimelineManagementPage() {
           <div className="w-full space-y-2">
             <div>
               <h3 className="text-neutral-300 text-xl font-bold text-center md:text-left">
-                _farhanHasinDipro
+                {user?.name || "Name not set"}
               </h3>
             </div>
             <div className="flex items-center gap-2">

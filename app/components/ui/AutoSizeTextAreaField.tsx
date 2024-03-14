@@ -5,7 +5,7 @@ import ReactTextareaAutosize from "react-textarea-autosize";
 
 const TEXTAREA_LABEL_STYLES = "block text-sm font-medium text-neutral-300";
 const TEXTAREA_BOX_STYLES =
-  "resize-none pl-3 pr-8 py-2 block w-full appearance-none rounded-md border border-neutral-300 placeholder-neutral-700 shadow-sm text-sm font-normal focus:border-primary-500 focus:outline-none focus:ring-primary-500";
+  "resize-none pl-3 pr-8 py-2 block w-full appearance-none rounded-md border border-neutral-300 placeholder-neutral-500 shadow-sm text-sm font-normal focus:border-primary-500 focus:outline-none focus:ring-primary-500";
 
 export default function AutoSizeTextAreaField(
   props: AutoSizeTextAreaFieldProps

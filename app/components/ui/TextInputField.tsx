@@ -5,7 +5,7 @@ import React from "react";
 const INPUT_LABEL_STYLES =
   "appearance-none block text-sm font-semibold text-neutral-300";
 const INPUT_BOX_STYLES =
-  "appearance-none block w-full text-sm rounded-md text-gray-700 border border-gray-300 p-3 placeholder-neutral-700 shadow-sm focus:border-2 focus:border-violet-500 focus:outline-none focus:ring-violet-500 active:border-violet-500 cursor-text";
+  "appearance-none block w-full text-sm rounded-md text-gray-700 border border-gray-300 p-3 placeholder-neutral-500 shadow-sm focus:border-2 focus:border-violet-500 focus:outline-none focus:ring-violet-500 active:border-violet-500 cursor-text";
 
 export default function TextInputField(props: TextInputFieldProps) {
   const {
