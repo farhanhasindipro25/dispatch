@@ -66,13 +66,23 @@ export default function DashboardTimelineManagementPage() {
       </div>
       <div>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-          <Image
-            src={user?.avatar || ""}
-            width={1000}
-            height={1000}
-            alt="user"
-            className="w-1/2 md:w-1/6 h-1/2 md:h-1/4 object-cover aspect-auto rounded-xl"
-          />
+          {user?.avatar ? (
+            <Image
+              src={user?.avatar || ""}
+              width={1000}
+              height={1000}
+              alt="user"
+              className="w-1/2 md:w-1/6 h-1/2 md:h-1/4 object-cover aspect-auto rounded-xl"
+            />
+          ) : (
+            <Image
+              src="/images/no-image.jpg"
+              width={1000}
+              height={1000}
+              alt="user"
+              className="w-1/2 animate-pulse md:w-1/6 h-1/2 md:h-1/4 object-cover aspect-auto rounded-xl"
+            />
+          )}
           <div className="w-full space-y-2">
             <div>
               <h3 className="text-neutral-300 text-xl font-bold text-center md:text-left">
