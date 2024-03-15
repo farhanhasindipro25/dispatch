@@ -3,6 +3,7 @@ import Button from "@/app/components/ui/Button";
 import { api } from "../../../../convex/_generated/api";
 import { usePaginatedQuery } from "convex/react";
 import React from "react";
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 export default function MonthlyTimeline({
   userId,
@@ -19,6 +20,14 @@ export default function MonthlyTimeline({
   return (
     <>
       <div className="divide-y divide-neutral-700 space-y-6">
+        {results.length === 0 && status !== "LoadingFirstPage" && (
+          <div className="flex items-center justify-center mt-4 h-1/2 gap-2">
+            <InformationCircleIcon className="w-6 h-6 text-neutral-400" />
+            <h2 className="text-neutral-400">
+              You have not added any activities yet!
+            </h2>
+          </div>
+        )}
         {results?.map((log, index) => (
           <div className="pt-6 space-y-4" key={index + 1}>
             <h2 className="text-white font-semibold text-base">

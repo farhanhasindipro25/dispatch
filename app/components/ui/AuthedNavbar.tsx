@@ -6,7 +6,7 @@ import React from "react";
 export default function AuthedNavbar() {
   return (
     <div className="bg-neutral-950">
-      <div className="p-4 max-w-9xl mx-auto flex justify-between items-center gap-4">
+      <div className="p-4 max-w-9xl mx-auto flex justify-between items-center">
         <Link className="flex items-center gap-2" href="/dashboard">
           <Image
             src="/logo/alt logo.svg"
@@ -19,7 +19,7 @@ export default function AuthedNavbar() {
             DISPATCH <span className="text-xs text-white">(v-MVP)</span>
           </h2>
         </Link>
-        <UserButton afterSignOutUrl="/"/>
+        <UserButton afterSignOutUrl="/" />
       </div>
     </div>
   );
