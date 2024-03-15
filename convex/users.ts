@@ -1,6 +1,7 @@
 import { ConvexError, v } from "convex/values";
 import { internalMutation, internalQuery, query } from "./_generated/server";
 import { authMutation, authQuery } from "./util";
+import { filterObject } from "@/util"
 
 export const getUserById = internalQuery({
   args: { userId: v.string() },
@@ -76,10 +77,9 @@ export const getMyUser = authQuery({
 });
 
 export const updateMyUser = authMutation({
-  args: { name: v.string() },
+  args: { name: v.optional(v.string()), description: v.optional(v.string())},
   async handler(ctx, args) {
-    await ctx.db.patch(ctx.user._id, {
-      name: args.name,
-    });
+    const patchedData = filterObject(args);
+    await ctx.db.patch(ctx.user._id, patchedData);
   },
 });

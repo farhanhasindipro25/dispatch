@@ -6,7 +6,7 @@ import Image from "next/image";
 function RightSideDrawer({ open, setOpen, children, ...props }: any) {
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={setOpen}>
+      <Dialog as="div" className="relative z-50" onClose={()=> {setOpen(false)}}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -43,7 +43,7 @@ function RightSideDrawer({ open, setOpen, children, ...props }: any) {
                     DISPATCH
                   </h2>
                 </div>
-                <button onClick={() => setOpen(false)}>
+              <button onClick={() => setOpen(false)}>
                   <XMarkIcon
                     className="w-6 h-6 text-neutral-300"
                     aria-hidden="true"

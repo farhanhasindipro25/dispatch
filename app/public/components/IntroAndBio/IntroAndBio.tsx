@@ -36,15 +36,11 @@ export default function IntroAndBio() {
           <div className="w-full space-y-2">
             <div>
               <h3 className="text-neutral-300 text-xl font-bold text-center md:text-left">
-                _farhanHasinDipro
+                { user?.name }
               </h3>
             </div>
             <h3 className="text-neutral-400 text-sm font-normal text-center md:text-left">
-              A Software Engineer in Bangladesh currently working @ Read Global
-              Consultants. I need to watch movies at Star Cineplex at least
-              twice a month to get my systems to compile, so that I can build
-              stunning user experiences with upbringing passion in the pursuit
-              of solving problems.
+              { user?.description }
             </h3>
           </div>
         </div>
