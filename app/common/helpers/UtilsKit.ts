@@ -56,3 +56,25 @@ export function generateActivityLogMsg(kind: ActivityKind, topic: string) {
   const synonym = generateRandomSynonym(kind, 42);
   return { synonym, topic };
 }
+
+export function formatDate(utcDate: Date) {
+  const date = new Date(utcDate);
+
+  // Get year, month (0-indexed), and day
+  const year = date.getFullYear();
+  const month = date.getMonth(); // Adjust for 0-based month indexing
+
+  const monthNamesReversed = [ "January", "February","March", "April", "May", "July", "June","August","September",  
+  "October", "November","December", 
+                              ];
+
+  // Use the month index to access the corresponding month name from the array
+  const monthName = monthNamesReversed[month];
+
+  // Format the date string (add leading zeros if needed)
+  const day = date.getDate().toString().padStart(2, '0');
+
+  const formattedDate = `${day} ${monthName} ${year}`;
+
+  return formattedDate;
+}

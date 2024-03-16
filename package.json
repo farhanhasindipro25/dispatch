@@ -8,18 +8,25 @@
     "start": "next start",
     "lint": "next lint",
     "dev:server": "convex dev",
-    "dev:client": "next dev",
-    "predev": "convex dev --run init --until-success"
+    "dev:client": "next dev"
   },
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.11",
+    "@clerk/nextjs": "^4.29.9",
+    "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "convex": "^1.9.0",
+    "convex-helpers": "^0.1.24",
     "next": "14.1.0",
     "npm-run-all": "^4.1.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
+    "react-select": "^5.8.0",
+    "react-textarea-autosize": "^8.5.3",
+    "svix": "^1.21.0",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
@@ -27,6 +34,8 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.1.3",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
