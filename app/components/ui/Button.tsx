@@ -35,13 +35,20 @@ export default function Button({
   variant,
   className,
   type,
+  disabled = false,
   onClick,
   ...props
 }: ButtonProps) {
   const BUTTON_STYLES = cn(BUTTON_VARIANTS({ variant }), className);
 
   return (
-    <button className={BUTTON_STYLES} type={type} onClick={onClick} {...props}>
+    <button
+      className={BUTTON_STYLES}
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      {...props}
+    >
       {children}
     </button>
   );

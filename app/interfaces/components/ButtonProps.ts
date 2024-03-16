@@ -6,4 +6,5 @@ export interface ButtonProps {
   variant: "PRIMARY" | "SECONDARY" | "TERTIARY" | "ACCENT" | "ALT_PRIMARY";
   type?: "submit" | "reset" | "button";
   onClick?: () => void;
+  disabled?: boolean | undefined;
 }

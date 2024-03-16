@@ -6,6 +6,7 @@ import { api } from "@/convex/_generated/api";
 import { useMutation, useQuery } from "convex/react";
 import React, { useState } from "react";
 import { LogType } from "@/types";
+import toast from "react-hot-toast";
 
 export default function ActivityForm({ onSubmit }) {
   const createLog = useMutation(api.logs.createLog);
@@ -17,12 +18,13 @@ export default function ActivityForm({ onSubmit }) {
   const submitForm = () => {
     createLog({ body, title, type: Number(type), tag_id_list: selTags });
     onSubmit();
+    toast("Activity added");
   };
 
   return (
     <div className="space-y-4">
       <SelectField
-        label="Tag"
+        label="Tag *"
         name="tag"
         id="tag"
         isMulti
@@ -44,14 +46,14 @@ export default function ActivityForm({ onSubmit }) {
       <TextInputField
         name="topic"
         id="topic"
-        label="Topic"
+        label="Topic *"
         placeholder="Enter topic"
         onChange={(e) => setTitle(e.target.value)}
       />
       <AutoSizeTextAreaField
         name="thoughts"
         id="thoughts"
-        label="Thoughts"
+        label="Thoughts *"
         placeholder="Add your thoughts on the topic"
         minRows={3}
         maxRows={5}
@@ -61,9 +63,17 @@ export default function ActivityForm({ onSubmit }) {
         variant="ACCENT"
         className="w-full justify-center"
         onClick={submitForm}
+        disabled={
+          title.length === 0 || body.length === 0 || selTags.length === 0
+            ? true
+            : false
+        }
       >
         Add
       </Button>
+      <p className="text-sm font-semibold text-neutral-400 text-center">
+        * All fields are required
+      </p>
     </div>
   );
 }
