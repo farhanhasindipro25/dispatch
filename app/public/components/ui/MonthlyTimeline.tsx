@@ -4,6 +4,7 @@ import { api } from "../../../../convex/_generated/api";
 import { usePaginatedQuery } from "convex/react";
 import React from "react";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
+import { formatDate } from "@/app/common/helpers/UtilsKit";
 
 export default function MonthlyTimeline({
   userId,
@@ -17,6 +18,7 @@ export default function MonthlyTimeline({
   const { results, status, loadMore } = usePaginatedQuery(query, args, {
     initialNumItems: 5,
   });
+
   return (
     <>
       <div className="divide-y divide-neutral-700 space-y-6">
@@ -31,7 +33,7 @@ export default function MonthlyTimeline({
         {results?.map((log, index) => (
           <div className="pt-6 space-y-4" key={index + 1}>
             <h2 className="text-white font-semibold text-base">
-              {new Date(log._creationTime).toLocaleDateString()}
+              {formatDate(new Date(log._creationTime).toLocaleDateString())}
             </h2>
             <div className="space-y-4 divide-y divide-neutral-800">
               <div className="flex flex-wrap items-start gap-2 pt-4">

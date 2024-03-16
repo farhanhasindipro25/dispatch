@@ -4,7 +4,6 @@ import { PageLayoutProps } from "../interfaces/layouts/PageLayoutProps";
 import AuthedNavbar from "../components/ui/AuthedNavbar";
 import { HorizontalTabProps } from "../interfaces/components/HorizontalTabProps";
 import { dashboardTabs } from "../common/staticData/dashboardTabs";
-import HorizontalTabNavigation from "../components/ui/HorizontalTabNavigation";
 
 export default function DashboardLayout({ children }: PageLayoutProps) {
   const tabs: HorizontalTabProps[] = dashboardTabs;

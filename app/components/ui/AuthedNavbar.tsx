@@ -16,7 +16,7 @@ export default function AuthedNavbar() {
             className="cursor-pointer h-5 w-5"
           />
           <h2 className="font-semibold italic text-sm text-gray-300">
-            DISPATCH <span className="text-xs text-white">(v-MVP)</span>
+            DISPATCH
           </h2>
         </Link>
         <UserButton afterSignOutUrl="/" />

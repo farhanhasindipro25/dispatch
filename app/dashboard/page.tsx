@@ -13,6 +13,9 @@ import { PencilSquareIcon } from "@heroicons/react/20/solid";
 import AutoSizeTextAreaField from "../components/ui/AutoSizeTextAreaField";
 import TextInputField from "../components/ui/TextInputField";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import { useSession } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+import Loader from "../components/ui/Loader";
 
 export default function DashboardTimelineManagementPage() {
   const [activityDrawerOpen, setActivityDrawerOpen] = useState(false);
@@ -22,10 +25,25 @@ export default function DashboardTimelineManagementPage() {
   const [description, setDescription] = useState<string | undefined>("");
   const user = useQuery(api.users.getMyUser);
   const updateUser = useMutation(api.users.updateMyUser);
+  const { isSignedIn } = useSession();
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
   useEffect(() => {
     setName(user?.name);
     setDescription(user?.description);
   }, [user]);
+
+  useEffect(() => {
+    if (isSignedIn) {
+      router.push("/dashboard");
+      setLoading(false);
+    }
+  }, [isSignedIn, router]);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="max-w-7xl mx-auto py-6 space-y-6">

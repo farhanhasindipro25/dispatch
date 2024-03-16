@@ -51,3 +51,25 @@ export function generateActivityLogMsg(kind: ActivityKind, topic: string) {
   const synonym = generateRandomSynonym(kind, 42);
   return { synonym, topic };
 }
+
+export function formatDate(string: string) {
+  const [month, day, year] = string.split("/").map(Number);
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const formattedDate = `${day} ${months[month - 1]} ${year}`;
+  return formattedDate;
+}
