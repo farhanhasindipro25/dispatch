@@ -19,11 +19,12 @@ export default function MonthlyTimeline({
     initialNumItems: 5,
   });
 
+  console.log(results);
   return (
     <>
       <div className="divide-y divide-neutral-700 space-y-6">
         {results.length === 0 && status !== "LoadingFirstPage" && (
-          <div className="flex items-center justify-center mt-4 h-1/2 gap-2">
+          <div className="flex items-center justify-center mt-40 h-1/2 gap-2">
             <InformationCircleIcon className="w-6 h-6 text-neutral-400" />
             <h2 className="text-neutral-400">
               You have not added any activities yet!

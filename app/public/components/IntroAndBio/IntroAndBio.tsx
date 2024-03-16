@@ -45,7 +45,7 @@ export default function IntroAndBio() {
                 <h3 className="text-neutral-300 text-xl font-bold">
                   {user?.name}
                 </h3>
-                <p className="text-neutral-500 text-sm font-normal overflow-hidden break-words">
+                <p className="text-neutral-400 text-sm font-normal overflow-hidden break-words">
                   {user?.description ||
                     "Click on the edit icon to set your name and bio. Make your name look cooler, like a private variable. e.g. _farhanHasinDipro"}
                 </p>
