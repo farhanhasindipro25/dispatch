@@ -114,3 +114,15 @@ export const createLog = authMutation({
     }
   },
 });
+
+export const deleteLog = authMutation({
+  args: {
+    id: v.id('logs'),
+  },
+  handler: async (ctx, args) => {
+    await ctx.db.delete(args.id);
+    return {
+      message: 'Log Deleted'
+    }
+  },
+});

@@ -78,11 +78,6 @@ import {
       if (!user) {
         throw new ConvexError("user not found");
       }
-  
-      if (!user.isAdmin) {
-        throw new ConvexError("must be admin to run this action");
-      }
-  
       const _id: Id<"users"> = user._id;
   
       return {
