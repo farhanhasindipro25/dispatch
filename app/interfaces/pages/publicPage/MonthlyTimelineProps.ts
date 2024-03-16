@@ -5,7 +5,9 @@ interface MonthlyActivityLogItem {
     | "DOCUMENTING"
     | "WORKING"
     | "DEBUGGING"
-    | "REVISITING";
+    | "REVISITING"
+    | "COMFORTABLE"
+    | "PARTICIPATED";
   topic: string;
   thoughts: string;
   category: "FRONTEND" | "BACKEND" | "FULLSTACK" | "OOP" | "DSA";

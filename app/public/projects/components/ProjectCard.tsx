@@ -63,7 +63,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <Badge variant="INFO_GREEN">{category}</Badge>
               </div>
             </div>
-            <Link href={`/public/projects/${slug}`}>
+            <Link href={`/portfolio/projects/${slug}`}>
               <Button variant="TERTIARY">
                 View Details
                 <ChevronRightIcon className="w-4 h-4 text-neutral-300 hover:translate-x-1 duration-300 ease-in-out" />

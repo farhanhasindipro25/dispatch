@@ -8,6 +8,7 @@ import { formatDate } from "@/app/common/helpers/UtilsKit";
 import Badge from "@/app/components/ui/Badge";
 import toast from "react-hot-toast";
 
+
 export default function MonthlyTimeline({
   userId,
   isPublic,
@@ -21,6 +22,7 @@ export default function MonthlyTimeline({
     initialNumItems: 5,
   });
   const deleteLog = useMutation(api.logs.deleteLog);
+
   return (
     <>
       <div className="divide-y divide-neutral-700 space-y-6">

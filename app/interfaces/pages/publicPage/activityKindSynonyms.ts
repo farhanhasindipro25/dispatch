@@ -4,4 +4,6 @@ export type ActivityKind =
   | "DOCUMENTING"
   | "WORKING"
   | "DEBUGGING"
+  | "PARTICIPATED"
+  | "COMFORTABLE"
   | "REVISITING";

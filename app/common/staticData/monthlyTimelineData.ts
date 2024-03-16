@@ -5,6 +5,20 @@ const monthlyTimelineData: MonthlyTimelineDataItem[] = [
     month: "February 2024",
     activityLog: [
       {
+        kind: "PARTICIPATED",
+        topic: "Hackathon",
+        thoughts:
+          "Whatever I am building with another amazing mind, is going to be a gamechanger. It will be something AI based and will massively help growing software developers. Details to be posted once version 0.1 is ready.",
+        category: "FRONTEND",
+      },
+      {
+        kind: "COMFORTABLE",
+        topic: "Typescript in the Frontend",
+        thoughts:
+          " I took the courage to start a project with Typescript and learn as I go with the flow. It is helping so far and I am learning the best practices.",
+        category: "FRONTEND",
+      },
+      {
         kind: "EXPLORING",
         topic: "frontend microservices (micro-frontend)",
         thoughts:

@@ -1,7 +1,7 @@
 import { onTheWeb } from "../../common/staticData/onTheWeb";
 import React from "react";
-import OnTheWebCard from "./components/OnTheWebCard";
 import StatsBadge from "@/app/components/ui/StatsBadge";
+import OnTheWebCard from "@/app/public/on-the-web/components/OnTheWebCard";
 
 export default function OnTheWebPage() {
   return (
