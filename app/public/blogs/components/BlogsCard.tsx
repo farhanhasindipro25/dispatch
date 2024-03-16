@@ -12,7 +12,7 @@ export default function BlogsCard({ blog }: BlogCardProps) {
       </h2>
       <h2 className="text-neutral-400 font-normal text-sm">{blog.date}</h2>
       <div className="flex justify-end">
-        <Link href={`/public/blogs/${blog.slug}`}>
+        <Link href={`/portfolio/blogs/${blog.slug}`}>
           <Button variant="TERTIARY">
             Read Blog
             <ChevronRightIcon className="w-4 h-4 text-neutral-300 hover:translate-x-1 hover:text-white duration-300 ease-in-out" />
