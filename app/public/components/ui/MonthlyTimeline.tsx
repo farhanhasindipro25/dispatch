@@ -8,7 +8,6 @@ import { formatDate } from "@/app/common/helpers/UtilsKit";
 import Badge from "@/app/components/ui/Badge";
 import toast from "react-hot-toast";
 
-
 export default function MonthlyTimeline({
   userId,
   isPublic,
@@ -55,7 +54,7 @@ export default function MonthlyTimeline({
               <div className="flex flex-wrap items-start gap-2 pt-4">
                 <div className="basis-full">
                   {log.tags.map((tag) => (
-                    <Badge variant="INFO">{tag?.name}</Badge>
+                    <Badge variant="INFO_SKY">{tag?.name}</Badge>
                   ))}
                 </div>
 

@@ -1,6 +1,5 @@
 "use client";
 import { publicPageTabs } from "@/app/common/staticData/publicPageTabs";
-import HorizontalTabNavigation from "@/app/components/ui/HorizontalTabNavigation";
 import { HorizontalTabProps } from "@/app/interfaces/components/HorizontalTabProps";
 import { api } from "@/convex/_generated/api";
 import { useQuery } from "convex/react";
@@ -64,9 +63,7 @@ export default function IntroAndBio() {
             )}
           </div>
         </div>
-        {/* <div>
-          <HorizontalTabNavigation tabs={tabs} current={currentTab} />
-        </div> */}
+
       </div>
     </div>
   );
