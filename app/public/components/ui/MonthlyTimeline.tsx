@@ -28,7 +28,8 @@ export default function MonthlyTimeline({
           <div className="flex items-center justify-center mt-40 h-1/2 gap-2">
             <InformationCircleIcon className="w-6 h-6 text-neutral-400" />
             <h2 className="text-neutral-400">
-              You have not added any activities yet!
+              Your activity log is{" "}
+              <span className="italic font-bold">null | undefined | [ ]</span>
             </h2>
           </div>
         )}
