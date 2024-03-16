@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "dev:server": "convex dev",
-    "dev:client": "next dev",
-    "predev": "convex dev --run init --until-success"
+    "dev:client": "next dev"
   },
   "dependencies": {
     "@clerk/clerk-sdk-node": "^4.13.11",
