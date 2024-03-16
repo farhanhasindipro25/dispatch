@@ -10,4 +10,6 @@ export interface AutoSizeTextAreaFieldProps {
   minRows?: number;
   maxRows?: number;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onInput?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onBlur?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }

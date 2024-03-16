@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import TimelineListView from "@/app/dashboard/timeline/components/months/TimelineListView";
 import RightSideDrawer from "@/app/components/ui/RightSideDrawer";
 import Button from "@/app/components/ui/Button";
-import EssentialsForm from "@/app/dashboard/timeline/components/months/EssentialsForm";
 import ActivityForm from "@/app/dashboard/timeline/components/months/ActivityForm";
 import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
@@ -16,12 +15,11 @@ import TextInputField from "../components/ui/TextInputField";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 export default function DashboardTimelineManagementPage() {
-  const [essentialsDrawerOpen, setEssentialsDrawerOpen] = useState(false);
   const [activityDrawerOpen, setActivityDrawerOpen] = useState(false);
   const [bioDrawerPen, setBioDrawerPen] = useState(false);
-  const [actionLoading, setActionLoading] = useState(null);
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [actionLoading, setActionLoading] = useState<boolean | null>(null);
+  const [name, setName] = useState<string | undefined>("");
+  const [description, setDescription] = useState<string | undefined>("");
   const user = useQuery(api.users.getMyUser);
   const updateUser = useMutation(api.users.updateMyUser);
   useEffect(() => {
@@ -57,7 +55,7 @@ export default function DashboardTimelineManagementPage() {
         </RightSideDrawer>
         <RightSideDrawer
           open={bioDrawerPen}
-          setOpen={(a) => {
+          setOpen={(a: boolean) => {
             setBioDrawerPen(a);
             setActionLoading(null);
           }}

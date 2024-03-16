@@ -22,6 +22,8 @@ export default function AutoSizeTextAreaField(
     minRows = 1,
     maxRows = 5,
     onChange,
+    onInput,
+    onBlur,
     ...otherProps
   } = props;
 
@@ -41,6 +43,8 @@ export default function AutoSizeTextAreaField(
         className={TEXTAREA_FIELD_STYLES}
         defaultValue={defaultValue}
         onChange={onChange}
+        onInput={onInput}
+        onBlur={onBlur}
         {...otherProps}
       />
     </div>

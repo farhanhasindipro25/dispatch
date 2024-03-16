@@ -17,6 +17,8 @@ export default function TextInputField(props: TextInputFieldProps) {
     className,
     value,
     onChange,
+    onInput,
+    onBlur,
     defaultValue,
     ...otherProps
   } = props;
@@ -36,6 +38,8 @@ export default function TextInputField(props: TextInputFieldProps) {
         className={INPUT_FIELD_STYLES}
         value={value}
         onChange={onChange}
+        onInput={onInput}
+        onBlur={onBlur}
         {...otherProps}
       />
     </div>

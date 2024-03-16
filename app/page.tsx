@@ -10,6 +10,7 @@ import { SignIn, useSession } from "@clerk/nextjs";
 export default function Home() {
   const { isSignedIn } = useSession();
   const [openSignIn, setSignin] = useState(false);
+
   return (
     <div className="p-4 bg-neutral-950 min-h-screen">
       <div className="max-w-7xl mx-auto px-4">
@@ -21,9 +22,7 @@ export default function Home() {
             alt="Dispatch Logo"
             className="cursor-pointer h-8 w-8"
           />
-          <h3 className="text-neutral-200 italic font-semibold">
-            DISPATCH
-          </h3>
+          <h3 className="text-neutral-200 italic font-semibold">DISPATCH</h3>
         </div>
         <div className="min-h-screen flex-col gap-14 flex items-center justify-center">
           <div className="space-y-4 flex flex-col justify-center items-center">
@@ -41,17 +40,20 @@ export default function Home() {
               </span> */}
             </p>
             <div className="flex justify-center">
-              { isSignedIn ? <Link
-              href="dashboard">
-                <Button variant="ALT_PRIMARY">GET STARTED</Button>
-              </Link>: 
-              <Button variant="ALT_PRIMARY" onClick={() => setSignin(true)}>GET STARTED</Button>
-              }
-              {openSignIn && <MyDialog onClose={()=>setSignin(false)}>
-                <SignIn 
-                  redirectUrl='/dashboard'
-                />
-              </MyDialog>}
+              {isSignedIn === true ? (
+                <Link href="dashboard">
+                  <Button variant="ALT_PRIMARY">GO TO DASHBOARD</Button>
+                </Link>
+              ) : (
+                <Button variant="ALT_PRIMARY" onClick={() => setSignin(true)}>
+                  GET STARTED
+                </Button>
+              )}
+              {openSignIn && (
+                <MyDialog onClose={() => setSignin(false)}>
+                  <SignIn redirectUrl="/dashboard" />
+                </MyDialog>
+              )}
             </div>
           </div>
           <div className="space-y-4">
