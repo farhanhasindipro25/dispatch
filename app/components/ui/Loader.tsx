@@ -9,7 +9,7 @@ export default function Loader() {
         width={2160}
         height={1080}
         alt="Dispatch Logo"
-        className="cursor-pointer h-1/5 w-1/5 animate-pulse"
+        className="cursor-pointer h-1/12 w-1/12 animate-pulse"
       />
     </div>
   );
