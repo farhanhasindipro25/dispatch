@@ -31,11 +31,11 @@ export default function MonthlyTimeline({
           </div>
         )}
         {results?.map((log, index) => (
-          <div className="pt-6 flex flex-wrap justify-center" key={index + 1}>
+          <div className="pt-6 flex flex-wrap" key={index + 1}>
             <h2 className="text-white font-semibold text-base basis-1/2">
               {formatDate(new Date(log._creationTime))}
             </h2>{
-              isPublic && <div className="basis-1/2">
+              isPublic || <div className="basis-1/2">
                 <Button className="bg-red-500 text-white ml-auto block" variant="ALT_PRIMARY" onClick={() => deleteLog({ id: log._id })}>
                   DELETE
                 </Button>
