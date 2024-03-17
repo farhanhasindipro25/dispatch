@@ -22,7 +22,7 @@ export default function Home() {
               : "justify-center"
           )}
         >
-          <div className="flex items-center justify-center gap-4 mb-20 py-4">
+          <div className="flex items-center justify-center gap-4 md:mb-14 lg:mb-20 py-4">
             <Image
               src="/logo/alt logo.svg"
               width={2160}
@@ -36,10 +36,10 @@ export default function Home() {
         </div>
         <div className="min-h-screen flex-col gap-14 flex items-center justify-center">
           <div className="space-y-4 flex flex-col justify-center items-center">
-            <h2 className="text-4xl max-w-2xl text-center font-bold text-white">
-              ORGANIZE YOUR LEARNINGS. DISPATCH YOUR WORK
+            <h2 className="text-3xl md:text-4xl lg:text-5xl max-w-2xl text-center font-bold text-white">
+              Dispatch your learnings. Organize your work.
             </h2>
-            <p className="text-base text-center font-medium text-neutral-300 max-w-4xl">
+            <p className="text-sm md:text-base text-center font-medium text-neutral-300 max-w-4xl">
               A seamless user experience for maintaining and managing your
               software engineering journey through our unique timeline. Create
               your own now and use the public page to put a good impression on
