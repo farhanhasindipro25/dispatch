@@ -15,6 +15,18 @@ export const getUserById = internalQuery({
   },
 });
 
+export const getUserPublic = query({
+  args: { userId: v.id('users') },
+  handler: async (ctx, args) => {
+    const user = await ctx.db.get(args.userId);
+
+    return {
+      name:  user?.name,
+      description: user?.description,
+      avatar:  user?.avatar
+    };
+  },
+});
 export const getProfile = query({
   args: { userId: v.id("users") },
   handler: async (ctx, args) => {

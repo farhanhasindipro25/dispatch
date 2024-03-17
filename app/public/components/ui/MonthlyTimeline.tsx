@@ -34,8 +34,8 @@ export default function MonthlyTimeline({
             </h2>
           </div>
         )}
-        {results?.map((log, index) => (
-          <div className="pt-6 flex flex-wrap" key={index + 1}>
+        {results?.map((log) => (
+          <div className="pt-6 flex flex-wrap" key={log._id}>
             <div className="flex justify-between w-full">
               <h2 className="text-white font-semibold text-base basis-1/2">
                 {formatDate(new Date(log._creationTime))}

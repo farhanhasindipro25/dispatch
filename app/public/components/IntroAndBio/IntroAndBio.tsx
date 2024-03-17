@@ -7,12 +7,10 @@ import Image from "next/image";
 
 import React, { useState } from "react";
 
-export default function IntroAndBio() {
+export default function IntroAndBio({ userId }) {
   const tabs: HorizontalTabProps[] = publicPageTabs;
   const [currentTab] = useState(1);
-  const user = useQuery(api.users.getMyUser);
-
-  console.log(user);
+  const user = useQuery(api.users.getUserPublic, { userId });
   return (
     <div className="space-y-12 bg-neutral-950 md:top-[100px] pt-6">
       <div className="max-w-2xl mx-auto px-4 space-y-8">
@@ -46,7 +44,7 @@ export default function IntroAndBio() {
                 </h3>
                 <p className="text-neutral-400 text-sm font-normal overflow-hidden break-words">
                   {user?.description ||
-                    "Click on the edit icon to set your name and bio. Make your name look cooler, like a private variable. e.g. _farhanHasinDipro"}
+                    "Bio is empty"}
                 </p>
               </div>
             ) : (

@@ -8,7 +8,6 @@ export default function PublicPageLayout({ children }: PageLayoutProps) {
   return (
     <div className="bg-neutral-950 min-h-screen pb-5">
       <PublicNavbar />
-      <IntroAndBio />
 
       <div className="min-h-screen mt-6 max-w-2xl mx-auto px-4">{children}</div>
       {/* <Footer /> */}

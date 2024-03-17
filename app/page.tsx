@@ -61,7 +61,7 @@ export default function Home() {
               )}
               {openSignIn && (
                 <MyDialog onClose={() => setSignin(false)}>
-                  <SignIn redirectUrl="/dashboard" />
+                  <SignIn />
                 </MyDialog>
               )}
             </div>
