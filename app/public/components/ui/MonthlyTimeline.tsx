@@ -51,13 +51,12 @@ export default function MonthlyTimeline({
               )}
             </div>
             <div className="space-y-4 divide-y divide-neutral-800 basis-full">
-              <div className="flex flex-wrap items-start gap-2 pt-4">
+              <div className="pt-4 space-y-4">
                 <div className="flex items-center gap-2 flex-wrap">
                   {log.tags.map((tag) => (
                     <Badge variant="INFO_SKY">{tag?.name}</Badge>
                   ))}
                 </div>
-
                 <div>
                   <p className="text-neutral-300 text-sm font-semibold">
                     {log.title}
