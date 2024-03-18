@@ -7,13 +7,13 @@ import Image from "next/image";
 
 import React, { useState } from "react";
 
-export default function IntroAndBio({ userId }) {
+export default function IntroAndBio({ userId }: any) {
   const tabs: HorizontalTabProps[] = publicPageTabs;
   const [currentTab] = useState(1);
   const user = useQuery(api.users.getUserPublic, { userId });
   return (
     <div className="space-y-12 bg-neutral-950 md:top-[100px] pt-6">
-      <div className="max-w-2xl mx-auto px-4 space-y-8">
+      <div className="max-w-2xl mx-auto space-y-8">
         <div className="w-full flex flex-col md:flex-row gap-4">
           <div className="w-full md:w-1/6">
             {user?.avatar ? (
@@ -43,8 +43,7 @@ export default function IntroAndBio({ userId }) {
                   {user?.name}
                 </h3>
                 <p className="text-neutral-400 text-sm font-normal overflow-hidden break-words">
-                  {user?.description ||
-                    "Bio is empty"}
+                  {user?.description || "Bio is empty"}
                 </p>
               </div>
             ) : (
@@ -61,7 +60,6 @@ export default function IntroAndBio({ userId }) {
             )}
           </div>
         </div>
-
       </div>
     </div>
   );
