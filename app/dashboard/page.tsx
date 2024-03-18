@@ -84,7 +84,7 @@ export default function DashboardTimelineManagementPage() {
               id="name"
               label="Name"
               placeholder="e.g. _farhanHasinDipro. Make it look cool ;)"
-              onInput={(e) => e.target.value && setName(e.target.value)}
+              onInput={(e) => setName(e.target.value)}
               onBlur={() => {
                 setActionLoading(true);
                 updateUser({ name }).finally(() => {
@@ -99,7 +99,7 @@ export default function DashboardTimelineManagementPage() {
               label="Bio"
               minRows={3}
               placeholder="Add a short bio about yourself"
-              onInput={(e) => e.target.value && setDescription(e.target.value)}
+              onInput={(e) => setDescription(e.target.value)}
               onBlur={() => {
                 setActionLoading(true);
                 updateUser({ description }).finally(() => {
